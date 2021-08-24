@@ -6,3 +6,4 @@ from .projects import Project
 from .categories import Category
 from .tables import Table
 from .datatypes import DataType
+from .technologies import Technology

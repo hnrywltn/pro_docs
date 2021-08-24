@@ -5,6 +5,7 @@ Revises:
 Create Date: 2020-11-20 15:06:02.230689
 
 """
+from typing import cast
 from sqlalchemy.sql.schema import Column
 from alembic import op
 import sqlalchemy as sa
@@ -78,6 +79,15 @@ def upgrade():
     sa.Column('description', sa.Text, nullable=False),
     sa.PrimaryKeyConstraint('id'),
     )
+    op.create_table('technologies',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('cat_id', sa.Integer(), nullable=False),
+    sa.Column('name', sa.String(length=50), nullable=False),
+    sa.Column('description', sa.Text, nullable=False),
+    sa.Column('resource_id', sa.Integer(), nullable=True),
+    sa.PrimaryKeyConstraint('id'),
+    )
+
     # ### end Alembic commands ###qqqqqqqqq
 
 
