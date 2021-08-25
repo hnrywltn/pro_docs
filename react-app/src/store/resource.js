@@ -27,7 +27,7 @@ const deleteResource = resource => ({
 
 
 export const getResources = () => async (dispatch) => {
-  const res = await fetch('/api/resources');
+  const res = await fetch('/api/resources/');
   if(res.ok) {
     const resources = await res.json();
     dispatch(load(resources));
