@@ -22,6 +22,7 @@ class Resource(db.Model):
       id=self.id,
       user_id=self.user_id,
       cat_id=self.cat_id,
+      name=self.name,
       ref_link=self.ref_link,
       description=self.description
     )

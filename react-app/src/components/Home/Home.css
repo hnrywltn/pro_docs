@@ -1,0 +1,21 @@
+.home-container {
+  grid-row: 1 / end;
+  grid-column: 1 / end;
+  display: grid;
+  grid-template-columns: repeat(20, 5vw);
+  grid-template-rows: repeat(20, 5vh);
+  /* overflow: scroll; */
+}
+
+.resources-container {
+  grid-row: 1 / end;
+  grid-column: 1 / end;
+  display: grid;
+  overflow: scroll;
+  /* background-color: red; */
+}
+
+
+.resource {
+  border: 1px solid black;
+}
