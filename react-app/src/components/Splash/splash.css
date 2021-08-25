@@ -1,0 +1,7 @@
+.splashpage {
+  grid-row: 1 / end;
+  grid-column: 1 / end;
+  display: grid;
+  grid-template-columns: repeat(25, 4vw);
+  grid-template-rows: repeat(25, 4vh);
+}

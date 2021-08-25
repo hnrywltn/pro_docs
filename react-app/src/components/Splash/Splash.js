@@ -1,8 +1,9 @@
 import React from 'react';
 // import { useParams } from 'react-router-dom';
 import { Link, useHistory } from 'react-router-dom';
-import { login } from '../store/session';
+import { login } from '../../store/session';
 import { useDispatch } from 'react-redux';
+import './splash.css'
 
 function Splash() {
 

@@ -73,9 +73,10 @@ def upgrade():
     )
     op.create_table('resources',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('user_id', sa.Integer(), nullable=False),
+    sa.Column('user_id', sa.Integer(), nullable=True),
     sa.Column('cat_id', sa.Integer(), nullable=False),
-    sa.Column('ref_link', sa.String(length=100), nullable=False),
+    sa.Column('name', sa.String(length=80), nullable=False),
+    sa.Column('ref_link', sa.Text(), nullable=False),
     sa.Column('description', sa.Text, nullable=False),
     sa.PrimaryKeyConstraint('id'),
     )
@@ -100,4 +101,5 @@ def downgrade():
     op.drop_table('projects')
     op.drop_table('components')
     op.drop_table('resources')
+    op.drop_table('technologies')
     # ### end Alembic commands ###
