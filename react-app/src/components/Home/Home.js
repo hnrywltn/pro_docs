@@ -23,9 +23,9 @@ function Home() {
     <div className="home-container">
       {/* <h1>HOME !!!!</h1> */}
       <div className="resources-container">
-        {resources?.map(resource => {
-          return <Resource key={resource.id} resource={resource} />;
-        })}
+        {resources?.map(resource => (
+             <Resource key={resource.id} resource={resource} />
+        ))}
       </div>
 
     </div>

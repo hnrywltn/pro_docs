@@ -1,5 +1,5 @@
 from flask import Blueprint, request
-from app.models import Resource, db
+from app.models import Resource, db, resources
 # from app.forms import ResourceForm
 
 
@@ -18,4 +18,15 @@ def resource():
     else:
         return 'Method not allowed'
 
-# @resources_routes.route('/resources/<int:id>', methods=['GET', 'PUT', 'DELETE'])
+
+
+@resources_routes.route('/<int:id>', methods=['PUT'])
+def update_resource(id):
+    data = request.json
+    resource = Resource.query.get(id)
+    print("OOOOOOOOOOOOOOOO_AHHHHHHHHHHHHHH!! OK", data)
+    resource.name = data['name']
+    resource.description = data['description']
+    resource.ref_link = data['ref_link']
+    db.session.commit()
+    return {**resource.to_dict()}

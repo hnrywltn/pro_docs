@@ -49,6 +49,20 @@ export const addResource = (payload) => async (dispatch) => {
   }
 }
 
+export const editResource = (payload) => async (dispatch) => {
+  console.log(payload)
+  const res = await fetch(`/api/resources/${payload.id}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+  if (res.ok) {
+    const resource = res.json();
+    dispatch(edit(resource))
+    return resource;
+  }
+}
+
 
 
 
