@@ -63,6 +63,19 @@ export const editResource = (payload) => async (dispatch) => {
   }
 }
 
+export const deleteResourceById = (resourceId) => async (dispatch) => {
+  console.log(resourceId, '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!THUNK reached')
+  const res = await fetch(`/api/resources/${resourceId}`, {
+    method: 'DELETE',
+    headers: { 'Content-Type': 'application/json' },
+  })
+  if (res.ok) {
+    const data = res.json();
+    dispatch(deleteResource(resourceId));
+    return data.message;
+  }
+}
+
 
 
 

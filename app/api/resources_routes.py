@@ -11,7 +11,6 @@ def resource():
         resources = Resource.query.all()
         return {'resources': [resource.to_dict() for resource in resources]}
     elif request.method == 'POST':
-        print("OOOOOOOOOOOOOOOO_AHHHHHHHHHHHHHH!! OK", request.json)
         resource = Resource(
             name=request.json['name'],
             description=request.json['description'],
@@ -36,3 +35,13 @@ def update_resource(id):
     resource.ref_link = data['ref_link']
     db.session.commit()
     return {**resource.to_dict()}
+
+
+
+@resources_routes.route('/<int:id>', methods=['DELETE'])
+def delete_resource(id):
+    print("OOOOOOOOOOOOOOOO_AHHHHHHHHHHHHHH!! OK", id)
+    resource = Resource.query.get(id)
+    db.session.delete(resource)
+    db.session.commit()
+    return {'message': id}

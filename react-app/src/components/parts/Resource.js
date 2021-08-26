@@ -1,11 +1,15 @@
 import { useEffect, useState } from 'react';
 import EditResourceForm from './EditResourceForm.js';
+import { useDispatch } from 'react-redux';
+import {deleteResourceById, getResources} from '../../store/resource.js';
 import '../Home/Home.css';
 
 
 function Resource({resource}) {
   const [showform, setShowform] = useState(false);
 
+
+  const dispatch = useDispatch();
   let dom = null;
 
 
@@ -13,6 +17,13 @@ function Resource({resource}) {
     setShowform(true);
   };
 
+
+  const deleteClick = (e) => {
+    e.preventDefault();
+    console.log('deleteClick ID', resource.id);
+    dispatch(deleteResourceById(resource.id));
+    window.location.reload()
+  };
 
 
 
@@ -26,6 +37,11 @@ function Resource({resource}) {
           onClick={editClick}
         >
           edit
+        </button>
+        <button
+          onClick={deleteClick}
+        >
+          delete
         </button>
       </div>
     );
