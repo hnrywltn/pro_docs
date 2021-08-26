@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getResources } from '../../store/resource.js';
@@ -21,6 +21,15 @@ function Home() {
   });
 
   const user = session.user;
+
+
+
+
+  const [gitHubHandle, setGitHubHandle] = useState('');
+  const [person, setPerson] = useState({});
+
+
+
 
   useEffect(() => {
     dispatch(getResources());
@@ -70,6 +79,25 @@ function Home() {
     // console.log('resourceMatrix', resourceMatrix);
 
 
+    const updateGitHubHandle = (e) => {
+      setGitHubHandle(e.target.value);
+    }
+
+
+
+    // let person = null;
+
+    async function handleGitHubSubmit(e) {
+      e.preventDefault();
+      const response = await fetch(`https://api.github.com/users/${gitHubHandle}`);
+      const data = await response.json();
+      setPerson(data);
+      setGitHubHandle('');
+    }
+
+
+
+
 
 
 
@@ -77,6 +105,8 @@ function Home() {
   return (
     <div className="home-container">
 
+
+      <div className="resources-container">
       <div className="resourceAdd">
         <h2>Add a Resource</h2>
         <AddResourceForm categories={categories} />
@@ -88,9 +118,6 @@ function Home() {
           return <Resource key={resource.id} resource={resource} />;
         })}
       </div>
-
-
-      <div className="resources-container">
         {resourceMatrix?.map((category, i) => {
           return (
             <div key={i} className="cat-container">
@@ -106,6 +133,26 @@ function Home() {
       </div>
 
 
+    <div className="githubAPI-container">
+      <h2>GitHub</h2>
+      <form
+        onSubmit={handleGitHubSubmit}
+        className="github-form"
+      >
+        <input
+          type="text"
+          placeholder="GitHub Username"
+          value={gitHubHandle}
+          onChange={updateGitHubHandle}
+        />
+        <button type="submit">Search</button>
+      </form>
+      <div className="github-info-container">
+        <img src={person?.avatar_url} alt="github avatar" />
+        <h3>{person?.name}</h3>
+        <p>{person?.html_url}</p>
+      </div>
+    </div>
 
 
     </div>
