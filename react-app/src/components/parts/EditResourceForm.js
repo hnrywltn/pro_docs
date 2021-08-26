@@ -2,10 +2,10 @@
 
 
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom';
-import { editResource } from '../../store/resource.js';
+import { editResource, getResources } from '../../store/resource.js';
 // import '../Home.css'
 
 function EditResourceForm({resource, setShowform}) {
@@ -19,10 +19,19 @@ function EditResourceForm({resource, setShowform}) {
     const [id, setId] = useState(resource.id);
 
 
+
+
+    useEffect(() => {
+        dispatch(getResources());
+    }, [dispatch]);
+
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        dispatch(editResource({name, description, ref_link, category, id}));
+        await dispatch(editResource({name, description, ref_link, category, id}));
+        await dispatch(getResources());
         setShowform(false);
+        // history.go();
     };
 
     const updateName = (e) => {
