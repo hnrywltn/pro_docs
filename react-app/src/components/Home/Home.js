@@ -26,7 +26,7 @@ function Home() {
 
 
   const [gitHubHandle, setGitHubHandle] = useState('');
-  const [person, setPerson] = useState({});
+  const [person, setPerson] = useState(null);
 
 
 
@@ -85,7 +85,6 @@ function Home() {
 
 
 
-    // let person = null;
 
     async function handleGitHubSubmit(e) {
       e.preventDefault();
@@ -94,7 +93,6 @@ function Home() {
       setPerson(data);
       setGitHubHandle('');
     }
-
 
 
 
@@ -148,9 +146,9 @@ function Home() {
         <button type="submit">Search</button>
       </form>
       <div className="github-info-container">
-        <img src={person?.avatar_url} alt="github avatar" />
-        <h3>{person?.name}</h3>
-        <p>{person?.html_url}</p>
+        {person?.name&&<img src={person.avatar_url} alt="github avatar" />}
+        {person?.name&&<h3>{person.name}</h3>}
+        {person?.name&&<p>{person.html_url}</p>}
       </div>
     </div>
 

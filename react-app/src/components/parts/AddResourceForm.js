@@ -14,7 +14,7 @@ function AddResourceForm({categories}) {
   const [user_id, setUserId] = useState(user.id);
   const [description, setDescription] = useState('');
   const [ref_link, setRef_Link] = useState('');
-  const [cat_id, setCatId] = useState(0);
+  const [cat_id, setCatId] = useState(1);
 
 
   console.log('catfromFORM', Object.values(categories));
