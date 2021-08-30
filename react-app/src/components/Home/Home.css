@@ -176,7 +176,7 @@
 
 
 .resources-container div h2 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-family: monospace;
   color: #2e2e2e;
 }
@@ -187,13 +187,15 @@
 .resourceAdd {
   margin: 30px;
   display: flex;
+  justify-items: center;
   flex-direction: column;
   align-items: center;
-  height: 170px;
+  height: 400px;
   grid-row:1 / 2;
   overflow-y: scroll;
   background-color: #9b9b9b;
-  border-radius: 80%;
+  border-radius: 10%;
+  border-top: 5px solid rgba(34, 34, 34, 0.561);
   /* border-top: 20px solid rgba(5, 5, 5, 0.568); */
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   /* background: linear-gradient(180deg, rgba(60,60,60,1) 0%, rgba(243,243,243,1) 100%); */
@@ -205,11 +207,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 170px;
+  height: 400px;
   grid-row:1 / 2;
   overflow-y: scroll;
   background-color: #9b9b9b;
-  border-radius: 80%;
+  border-radius: 10%;
+  border-top: 5px solid rgba(34, 34, 34, 0.561);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   /* border-top: 20px solid rgb(3, 3, 3); */
   /* background: linear-gradient(180deg, rgba(60,60,60,0.25) 0%, rgba(243,243,243,1) 100%); */
@@ -219,10 +222,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 170px;
+  height: 400px;
   margin: 20px;
   overflow-y: scroll;
-  border-radius: 80%;
+  border-radius: 10%;
   border-top: 5px solid rgba(34, 34, 34, 0.561);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   background-color: rgb(144, 144, 144);

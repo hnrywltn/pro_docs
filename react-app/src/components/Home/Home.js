@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { getResources } from '../../store/resource.js';
 import { getCategories } from '../../store/category.js';
 import Resource from '../parts/Resource.js';
@@ -75,9 +74,6 @@ function Home() {
       return resource.user_id === user.id;
     });
 
-    // console.log('resARRAY', resources);
-    // console.log('catIds', catIds);
-    // console.log('resourceMatrix', resourceMatrix);
 
 
     const updateGitHubHandle = (e) => {
@@ -114,17 +110,17 @@ function Home() {
 
 
       <div className="resources-container">
-      <div className="resourceAdd">
-        <h2>Add a Resource</h2>
-        <AddResourceForm categories={categories} />
-      </div>
+        <div className="resourceAdd">
+          <h2>Add a Resource</h2>
+          <AddResourceForm categories={categories} />
+        </div>
 
-      <div className="personalResources">
-        <h2>Your Resources</h2>
-        {personalResources.map(resource => {
-          return <Resource key={resource.id} resource={resource} />;
-        })}
-      </div>
+        <div className="personalResources">
+          <h2>Your Resources</h2>
+          {personalResources.map(resource => {
+            return <Resource key={resource.id} resource={resource} />;
+          })}
+        </div>
         {resourceMatrix?.map((category, i) => {
           return (
             <div key={i} className="cat-container">
