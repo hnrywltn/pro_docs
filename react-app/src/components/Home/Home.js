@@ -27,6 +27,7 @@ function Home() {
 
   const [gitHubHandle, setGitHubHandle] = useState('');
   const [person, setPerson] = useState(null);
+  const [publicRepos, setPublicRepos] = useState(null);
 
 
 
@@ -83,15 +84,23 @@ function Home() {
       setGitHubHandle(e.target.value);
     }
 
-
+    async function updatePublicRepos (per) {
+      const reposStr = await fetch(per?.repos_url);
+      const repos = await reposStr.json();
+      console.log('repos', repos);
+      setPublicRepos(repos);
+    }
 
 
     async function handleGitHubSubmit(e) {
       e.preventDefault();
+
       const response = await fetch(`https://api.github.com/users/${gitHubHandle}`);
       const data = await response.json();
       setPerson(data);
+      console.log('person', person);
       setGitHubHandle('');
+      updatePublicRepos(data);
     }
 
 
@@ -149,6 +158,21 @@ function Home() {
         {person?.name&&<img src={person.avatar_url} alt="github avatar" />}
         {person?.name&&<h3>{person.name}</h3>}
         {person?.name&&<p>{person.html_url}</p>}
+        {person?.name&&<div className="publicRepos-container">
+          {publicRepos?.map((repo, i) => {
+            return (
+              <div key={i} className="publicRepo">
+                <a target="blank" href={repo.clone_url}>{repo.name}</a>
+                <p>Language: {repo.language ? repo.language : 'Not listed'}</p>
+                <p>{repo.pushed_at}</p>
+              </div>
+            )
+          })}
+        </div>}
+
+
+
+
       </div>
     </div>
 

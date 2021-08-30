@@ -17,7 +17,6 @@ function AddResourceForm({categories}) {
   const [cat_id, setCatId] = useState(1);
 
 
-  console.log('catfromFORM', Object.values(categories));
 
   const handleSubmit = async (e) => {
     e.preventDefault();

@@ -20,7 +20,6 @@ function Resource({resource}) {
 
   const deleteClick = (e) => {
     e.preventDefault();
-    console.log('deleteClick ID', resource.id);
     dispatch(deleteResourceById(resource.id));
     window.location.reload()
   };

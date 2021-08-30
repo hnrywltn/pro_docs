@@ -50,7 +50,6 @@ export const addResource = (payload) => async (dispatch) => {
 }
 
 export const editResource = (payload) => async (dispatch) => {
-  console.log(payload)
   const res = await fetch(`/api/resources/${payload.id}`, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
@@ -64,7 +63,6 @@ export const editResource = (payload) => async (dispatch) => {
 }
 
 export const deleteResourceById = (resourceId) => async (dispatch) => {
-  console.log(resourceId, '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!THUNK reached')
   const res = await fetch(`/api/resources/${resourceId}`, {
     method: 'DELETE',
     headers: { 'Content-Type': 'application/json' },

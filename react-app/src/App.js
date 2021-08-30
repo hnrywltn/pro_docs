@@ -42,14 +42,14 @@ function App() {
           <NavBar />
           <SignUpForm />
         </Route>
-        <ProtectedRoute path='/projects' exact={true} >
+        {/* <ProtectedRoute path='/projects' exact={true} >
           <NavBar />
           <Projects/>
-        </ProtectedRoute>
-        {/* <ProtectedRoute path='/users/:userId' exact={true} >
-          <NavBar />
-          <User />
         </ProtectedRoute> */}
+{/* <ProtectedRoute path='/users/:userId' exact={true} >
+  <NavBar />
+  <User />
+</ProtectedRoute> */}
         <ProtectedRoute path='/' exact={true} >
           <NavBar />
           <Home />

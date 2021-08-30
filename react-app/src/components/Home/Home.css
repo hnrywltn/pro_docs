@@ -25,8 +25,9 @@
   display: grid;
   overflow: hidden;
   height: 100%;
-  background: linear-gradient(180deg, rgba(60,60,60,1) 0%, rgba(187,187,187,1) 100%);
+  background: linear-gradient(180deg, rgba(243,243,243,1)  0%, rgba(60,60,60,0.25) 100%);
 }
+
 
 .githubAPI-container h2 {
   display: flex;
@@ -36,6 +37,8 @@
   grid-column: 1 / end;
   font-size: 2.75rem;
   font-family: monospace;
+  color: rgb(119, 119, 119);
+  text-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .githubAPI-container form {
@@ -50,13 +53,15 @@
   background-color: aliceblue;
   border-radius: 30px;
   margin-bottom: 20px;
+  margin-left: 20px;
   font-family: monospace;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .githubAPI-container form input {
   width: 80%;
   height: 35%;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   border: none;
   border-bottom: 2px solid #000;
   margin-bottom: 10px;
@@ -69,7 +74,7 @@
   height: 30%;
   font-size: 25px;
   border: none;
-  background-color: brown;
+  background-color: rgba(165, 42, 42, 0.589);
   border-radius: 30px;
   font-family: monospace;
 }
@@ -81,12 +86,74 @@
   grid-column: 2 / end;
   display: grid;
   overflow: hidden;
+  font-family: monospace;
+  height: 30vh;
 }
 
 .github-info-container img {
-  width: 40%;
+  margin-left: 20%;
+  width: 65%;
   border-radius: 50%;
+  grid-row: 2 / 5;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
 
+.github-info-container h3 {
+  margin-left: 20%;
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+}
+
+.github-info-container p {
+  margin-left: 20%;
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+}
+
+.github-info-container a {
+  margin-left: 10%;
+}
+
+
+
+.publicRepos-container {
+  grid-column: 4 / 5;
+  padding-left: 15%;
+  padding-right: 15%;
+  grid-row: 2 / end;
+  height: 85%;
+  background-color: rgba(80, 79, 79, 0.376);
+  /* border:1px solid #000; */
+  overflow-y: scroll;
+  border-radius: 8%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
+
+
+
+
+
+
+
+.publicRepo {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.publicRepo a {
+  text-decoration: none;
+  color:white;
+  font-size: 1rem;
+}
+
+.publicRepo p {
+  font-weight: bold;
+  font-size: .75rem;
 }
 
 
@@ -102,10 +169,8 @@
   overflow-y: scroll;
   height: 100%;
 	box-sizing: border-box;
-  /* grid-gap: 5%; */
-  /* padding: 10%; */
-  /* background-color: red; */
-  background: linear-gradient(180deg, rgba(187,187,187,1) 0%, rgba(60,60,60,1) 100%);
+  border-bottom: 1px solid #000;
+  background: linear-gradient(180deg, rgba(60,60,60,0.25) 0%, rgb(243, 243, 243) 100%);
 }
 
 
@@ -120,32 +185,37 @@
 
 
 .resourceAdd {
+  margin: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 170px;
   grid-row:1 / 2;
   overflow-y: scroll;
-  background-color: #777777;
+  background-color: #9b9b9b;
   border-radius: 80%;
-  border-top: 20px solid rgb(49, 49, 49);  background: linear-gradient(180deg, rgba(60,60,60,1) 0%, rgba(187,187,187,1) 100%);
+  /* border-top: 20px solid rgba(5, 5, 5, 0.568); */
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  /* background: linear-gradient(180deg, rgba(60,60,60,1) 0%, rgba(243,243,243,1) 100%); */
 }
 
+
 .personalResources {
+  margin: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 170px;
   grid-row:1 / 2;
   overflow-y: scroll;
-  background-color: #777777;
+  background-color: #9b9b9b;
   border-radius: 80%;
-  border-top: 20px solid rgb(49, 49, 49);  background: linear-gradient(180deg, rgba(60,60,60,1) 0%, rgba(187,187,187,1) 100%);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  /* border-top: 20px solid rgb(3, 3, 3); */
+  /* background: linear-gradient(180deg, rgba(60,60,60,0.25) 0%, rgba(243,243,243,1) 100%); */
 }
 
 .cat-container {
-  /* width: 80%; */
-  background-color: aquamarine;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -153,9 +223,13 @@
   margin: 20px;
   overflow-y: scroll;
   border-radius: 80%;
-  border-top: 12px solid rgb(34, 34, 34);
-  /* background: linear-gradient(180deg, rgba(60,60,60,1) 0%, rgba(187,187,187,1) 100%); */
+  border-top: 5px solid rgba(34, 34, 34, 0.561);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   background-color: rgb(144, 144, 144);
+}
+
+.cat-container:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 19px 38px, rgba(0, 0, 0, 0.4) 0px 15px 12px;
 }
 
 .resource {
