@@ -4,12 +4,14 @@ import session from './session';
 import resourceReducer from './resource';
 import categoriesReducer from './category';
 import projectReducer from './project';
+import technologiesReducer from './technology';
 
 const rootReducer = combineReducers({
   session,
   resources: resourceReducer,
   categories: categoriesReducer,
   projects: projectReducer,
+  technologies: technologiesReducer,
 });
 
 

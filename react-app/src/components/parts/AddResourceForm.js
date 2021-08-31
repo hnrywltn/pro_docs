@@ -34,7 +34,7 @@ function AddResourceForm({categories}) {
     // } else {
       // setErrors(response.errors);
     // }
-  }
+  };
 
 
 const updateName = (e) => {

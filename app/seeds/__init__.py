@@ -3,6 +3,7 @@ from .users import seed_users, undo_users
 from .categories import seed_categories, undo_categories
 from .resources import seed_resources, undo_resources
 from .datatypes import seed_dataTypes, undo_dataTypes
+from .technologies import seed_technologies, undo_technologies
 
 
 # Creates a seed group to hold our commands
@@ -17,6 +18,7 @@ def seed():
     seed_categories()
     seed_resources()
     seed_dataTypes()
+    seed_technologies()
     # Add other seed functions here
 
 
@@ -27,4 +29,5 @@ def undo():
     undo_categories()
     undo_resources()
     undo_dataTypes()
+    undo_technologies()
     # Add other undo functions here
