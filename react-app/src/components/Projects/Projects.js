@@ -39,7 +39,7 @@ function Projects() {
   const [user_id] = useState(user.id);
   const [resources_array, setResourcesArray] = useState([]);
   const [tech_array, setTechArray] = useState([]);
-  const [wireframingArray, setWireframingArray] = useState([]);
+  const [wireframing_array, setWireframingArray] = useState(null);
   const [description, setDescription] = useState('');
   const [github_link, setGithubLink] = useState('');
   const [complete, setComplete] = useState(false);
@@ -60,7 +60,7 @@ function Projects() {
       user_id: user.id,
       resources_array: JSON.stringify(resources_array),
       tech_array: JSON.stringify(tech_array),
-      wireframingArray: JSON.stringify(wireframingArray),
+      wireframing_array: JSON.stringify(wireframing_array),
       description,
       github_link,
       complete
@@ -77,12 +77,12 @@ function Projects() {
 
 
   const updateTechArray = (e) => {
-    setTechArray(tech_array.push(e.target.value));
-    console.log(tech_array);
+    let array = tech_array.concat(Number(e.target.value));
+    setTechArray(array);
   };
 
 
-
+// console.log(tech_array)
 
 
   const updateDescription = (e) => {
