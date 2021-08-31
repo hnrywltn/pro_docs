@@ -24,3 +24,24 @@ def project():
     return {**project.to_dict()}
   else:
     return 'Method not allowed'
+
+
+
+@projects_routes.route('/<int:id>', methods=['PUT'])
+def update_project(id):
+    data = request.json
+    project = Project.query.get(id)
+    project.name = data['name']
+    project.description = data['description']
+    project.ref_link = data['ref_link']
+    db.session.commit()
+    return {**project.to_dict()}
+
+
+@projects_routes.route('/<int:id>', methods=['DELETE'])
+def delete_project(id):
+    print("OOOOOOOOOOOOOOOO_AHHHHHHHHHHHHHH!! OK", id)
+    project = Project.query.get(id)
+    db.session.delete(project)
+    db.session.commit()
+    return {'message': id}

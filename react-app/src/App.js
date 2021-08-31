@@ -11,6 +11,7 @@ import Splash from './components/Splash/Splash';
 import Home from './components/Home/Home';
 import Projects from './components/Projects/Projects';
 import { authenticate } from './store/session';
+import { ModalProvider } from './components/context/modal.js';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -28,6 +29,7 @@ function App() {
   }
 
   return (
+    <ModalProvider>
     <BrowserRouter>
 
       <Switch>
@@ -56,6 +58,7 @@ function App() {
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>
+    </ModalProvider>
   );
 }
 

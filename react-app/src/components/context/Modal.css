@@ -1,0 +1,46 @@
+#modal {
+  position: fixed;
+  /* height: 90%;
+  width: 90%; */
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation:modalSlide 0.5s ease-out forwards;
+  transform: translateY(50%);
+}
+
+#modal-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#modal-content {
+  position: absolute;
+  background-color:white;
+}
+
+.test {
+  background-color: aqua;
+}
+
+
+@keyframes modalSlide {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
