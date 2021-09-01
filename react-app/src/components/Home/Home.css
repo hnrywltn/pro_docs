@@ -190,7 +190,7 @@
   justify-items: center;
   flex-direction: column;
   align-items: center;
-  height: 400px;
+  height: 300px;
   grid-row:1 / 2;
   overflow-y: scroll;
   background-color: #9b9b9b;
@@ -201,13 +201,41 @@
   /* background: linear-gradient(180deg, rgba(60,60,60,1) 0%, rgba(243,243,243,1) 100%); */
 }
 
+.resourceAdd form {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  align-items: center;
+  font-family: monospace;
+  font-size: large;
+  padding: 5px;
+}
+
+.resourceAdd form input {
+  /* border-radius: 10%; */
+  border: none;
+  /* margin-top: 10px; */
+}
+
+.resourceAdd form button {
+  /* border-radius: 20%; */
+  width: 90%;
+  height: 40px;
+  border: none;
+  margin-top: 10px;
+}
+
+/* .resourceAdd form label {
+  width: 50%;
+} */
+
 
 .personalResources {
   margin: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 400px;
+  height: 300px;
   grid-row:1 / 2;
   overflow-y: scroll;
   background-color: #9b9b9b;

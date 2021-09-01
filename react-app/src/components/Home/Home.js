@@ -25,7 +25,7 @@ function Home() {
 
 
   const [gitHubHandle, setGitHubHandle] = useState('');
-  const [person, setPerson] = useState(null);
+  const [person, setPerson] = useState('');
   const [publicRepos, setPublicRepos] = useState(null);
 
 
@@ -150,7 +150,7 @@ function Home() {
         />
         <button type="submit">Search</button>
       </form>
-      <div className="github-info-container">
+      {person?.name && <div className="github-info-container">
         {person?.name&&<img src={person.avatar_url} alt="github avatar" />}
         {person?.name&&<h3>{person.name}</h3>}
         {person?.name&&<p>{person.html_url}</p>}
@@ -169,7 +169,8 @@ function Home() {
 
 
 
-      </div>
+      </div>}
+      {/* {!person?.name &&<div>Find people on github!!</div>} */}
     </div>
 
 

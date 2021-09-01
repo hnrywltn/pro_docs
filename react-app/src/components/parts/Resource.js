@@ -29,7 +29,7 @@ function Resource({resource}) {
 
   if(resource.user_id) {
     dom = (
-      <div className="resource">
+      <div className="resource" key={resource.id}>
         <a href={resource.ref_link} target="blank">{resource.name}</a>
         <p>{resource.description}</p>
         <button
@@ -48,7 +48,7 @@ function Resource({resource}) {
 
   if(!resource.user_id) {
     dom = (
-      <div className="resource">
+      <div className="resource" key={resource.id}>
         <a href={resource.ref_link} target="blank">{resource.name}</a>
         <p>{resource.description}</p>
       </div>

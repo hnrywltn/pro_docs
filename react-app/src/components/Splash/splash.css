@@ -21,6 +21,10 @@
   font-family: monospace;
 }
 
+.demobttn {
+  cursor: pointer;
+}
+
 .splashLogin {
   display: flex;
   background-color: rgba(147, 165, 184, 0.671);

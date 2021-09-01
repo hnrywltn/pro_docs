@@ -29,4 +29,33 @@ html, body {
 	align-items: center;
 	background: linear-gradient(180deg, rgba(42, 106, 165, 0.137) 0%, rgba(187, 187, 187, 0.404) 50%, rgba(42, 106, 165, 0.137) 100%);
 	border-right: 3px solid rgba(202, 202, 202, 0.651);
+	font-family: monospace;
+}
+
+.navbar button {
+	background: none;
+	border: none;
+	font-family: monospace;
+}
+
+.navbar button:hover {
+	cursor: pointer;
+}
+
+.navlink:hover {
+	color: rgb(0, 0, 0);
+	text-shadow: 2px 2px 2px #ffffff;
+}
+
+.navlink {
+	display: flex;
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	align-items: center;
+	height: 33%;
+	/* width: 100%; */
+  background-color: transparent;
 }

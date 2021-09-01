@@ -59,6 +59,7 @@ const updateRef_link = (e) => {
       className='form formstyle'
       onSubmit={handleSubmit}
     >
+      {resourceAdded && <div>Resource Added!</div>}
       <div className="errors">
           {errors.map((error, ind) => (
               <div key={ind}>{error}</div>
@@ -71,6 +72,7 @@ const updateRef_link = (e) => {
             value={name}
             onChange={updateName}
             maxLength="80"
+            required
             />
       </div>
       <div>
@@ -89,18 +91,20 @@ const updateRef_link = (e) => {
         <input
             type='text'
             value={description}
-            onChange={updateDescription} />
+            onChange={updateDescription}
+            required/>
       </div>
       <div>
         <label>Reference Link</label>
         <input
             type='text'
             value={ref_link}
-            onChange={updateRef_link} />
+            onChange={updateRef_link}
+            required />
       </div>
 
     <button type='submit'>Add</button>
-    {resourceAdded && <div>Resource Added!</div>}
+
     </form>
   )
 

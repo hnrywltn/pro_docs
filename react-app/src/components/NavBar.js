@@ -6,19 +6,19 @@ import LogoutButton from './auth/LogoutButton';
 const NavBar = () => {
   return (
     <nav className="navbar">
-      <Link to='/' exact={true} activeClassName='active'>
+      <Link to='/'  className="navlink">
         Home
       </Link>
 
-      <Link to='/login' exact={true} activeClassName='active'>
+      {/* <Link to='/login'  className="">
         Login
       </Link>
 
-      <Link to='/sign-up' exact={true} activeClassName='active'>
+      <Link to='/sign-up'  className="">
         Sign Up
-      </Link>
+      </Link> */}
 
-      <Link to='/projects' exact={true} activeClassName='active'>
+      <Link to='/projects'  className="navlink">
         Projects
       </Link>
 
