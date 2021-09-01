@@ -37,7 +37,7 @@ function Project({project}) {
   return (
     <>
     <div onClick={() => setShowModal(true)} className="something">
-      Start Project
+      {project.github_link}
     </div>
         {showModal && (
           <Modal onClose={() => setShowModal(false)} >
