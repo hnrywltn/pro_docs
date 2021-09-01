@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { getResources, addResource } from '../../store/resource.js';
 
@@ -65,7 +65,7 @@ const updateRef_link = (e) => {
               <div key={ind}>{error}</div>
           ))}
       </div>
-      <div>
+      <div className="inputHolder">
         <label>Name</label>
         <input
             type='text'
@@ -75,7 +75,7 @@ const updateRef_link = (e) => {
             required
             />
       </div>
-      <div>
+      <div className="inputHolder">
         <label>Category</label>
         <select
             value={cat_id}
@@ -86,7 +86,7 @@ const updateRef_link = (e) => {
           ))}
         </select>
       </div>
-      <div>
+      <div className="inputHolder">
         <label>Description</label>
         <input
             type='text'
@@ -94,11 +94,14 @@ const updateRef_link = (e) => {
             onChange={updateDescription}
             required/>
       </div>
-      <div>
+      <div className="inputHolder">
         <label>Reference Link</label>
         <input
-            type='text'
+            className="addresourceFormLINK"
+            type='url'
             value={ref_link}
+            pattern="https://.*" size="100"
+            placeholder="https:// {url}"
             onChange={updateRef_link}
             required />
       </div>

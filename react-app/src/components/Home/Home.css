@@ -201,14 +201,22 @@
   /* background: linear-gradient(180deg, rgba(60,60,60,1) 0%, rgba(243,243,243,1) 100%); */
 }
 
+
 .resourceAdd form {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
+  justify-content: center;
   align-items: center;
   font-family: monospace;
   font-size: large;
   padding: 5px;
+}
+
+.inputHolder {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
 }
 
 .resourceAdd form input {
@@ -216,6 +224,11 @@
   border: none;
   /* margin-top: 10px; */
 }
+
+.addresourceFormLINK {
+  width: 30%
+};
+
 
 .resourceAdd form button {
   /* border-radius: 20%; */
