@@ -4,4 +4,114 @@
   display: grid;
   grid-template-columns: repeat(25, 4vw);
   grid-template-rows: repeat(25, 4vh);
+  background-image: url(https://i.imgur.com/w2UbEfX.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: monospace;
+}
+
+
+.demobttn {
+  background-color: rgba(147, 165, 184, 0.671);
+  grid-row: 21 / 25;
+  grid-column: 23 / 25;
+  font-size: 200%;
+  border: 1px solid black;
+  font-family: monospace;
+}
+
+.splashLogin {
+  display: flex;
+  background-color: rgba(147, 165, 184, 0.671);
+  justify-content: center;
+  align-items: center;
+  grid-row: 11 / 15;
+  grid-column: 23 / 25;
+  border: 1px solid black;
+  font-family: monospace;
+}
+
+.splashLogin img {
+  width: 90%;
+}
+
+.splashSignup {
+  background-color: rgba(147, 165, 184, 0.671);
+  display: flex;
+  grid-row: 2 / 6;
+  grid-column: 23 / 25;
+  justify-content: center;
+  align-items: center;
+  font-size: 200%;
+  text-decoration: none;
+  border: 1px solid black;
+  font-family: monospace;
+}
+
+.splashLinkden {
+  background-color: rgba(147, 165, 184, 0.671);
+  display: flex;
+  grid-row: 21 / 25;
+  grid-column: 3 / 5;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+}
+
+.splashLinkden img {
+  width: 90%;
+}
+
+.splashgithub {
+  background-color: rgba(147, 165, 184, 0.671);
+  display: flex;
+  grid-row: 21 / 25;
+  grid-column: 8 / 10;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.splashgithub img {
+  width: 90%;
+}
+
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 3 / 12;
+  grid-row: 3 / 17;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background-color: black;
+  box-shadow: 0px 0px 30px #ffffff73;
+}
+
+.icon-container img {
+  width: 70%;
+}
+
+.splashabout {
+  display: flex;
+  background-color: rgba(27, 27, 27, 0.808);
+  font-size: 1.7rem;
+  color: snow;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  grid-row: 11 / 21;
+  grid-column: 12 / 21;
+}
+
+.title {
+  font-size: 5.5rem;
+  color: snow;
+  text-align: center;
+  grid-column: 12 / 21;
+  grid-row: 3 / 8;
 }
