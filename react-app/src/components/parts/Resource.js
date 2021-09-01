@@ -18,10 +18,10 @@ function Resource({resource}) {
   };
 
 
-  const deleteClick = (e) => {
+  const deleteClick = async (e) => {
     e.preventDefault();
-    dispatch(deleteResourceById(resource.id));
-    window.location.reload()
+    await dispatch(deleteResourceById(resource.id));
+    await dispatch(getResources());
   };
 
 

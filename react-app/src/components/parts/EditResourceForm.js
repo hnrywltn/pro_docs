@@ -31,7 +31,6 @@ function EditResourceForm({resource, setShowform}) {
         await dispatch(editResource({name, description, ref_link, category, id}));
         await dispatch(getResources());
         setShowform(false);
-        // history.go();
     };
 
     const updateName = (e) => {

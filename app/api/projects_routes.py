@@ -31,9 +31,9 @@ def project():
 def update_project(id):
     data = request.json
     project = Project.query.get(id)
-    project.name = data['name']
+    # project.name = data['name']
     project.description = data['description']
-    project.ref_link = data['ref_link']
+    project.github_link = data['github_link']
     db.session.commit()
     return {**project.to_dict()}
 
