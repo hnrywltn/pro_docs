@@ -12,11 +12,11 @@ import './Projects.css';
 function Projects() {
 
   const dispatch = useDispatch();
-  const history = useHistory();
+  // const history = useHistory();
 
-  const resources = useSelector(state => {
-    return state.resources;
-  });
+  // const resources = useSelector(state => {
+  //   return state.resources;
+  // });
   const session = useSelector(state => {
     return state.session;
   });
@@ -36,13 +36,13 @@ function Projects() {
 
 
 
-  const [user_id] = useState(user.id);
-  const [resources_array, setResourcesArray] = useState([]);
+  // const [user_id] = useState(user.id);
+  const [resources_array] = useState([]);
   const [tech_array, setTechArray] = useState([]);
-  const [wireframing_array, setWireframingArray] = useState(null);
+  const [wireframing_array] = useState(null);
   const [description, setDescription] = useState('');
   const [github_link, setGithubLink] = useState('');
-  const [complete, setComplete] = useState(false);
+  const [complete] = useState(false);
 
 
   useEffect(() => {
@@ -70,15 +70,19 @@ function Projects() {
   };
 
 
-  const updateResourcesArray = (e) => {
-    setResourcesArray(resources_array.push(e.target.value));
-  };
+  // const updateResourcesArray = (e) => {
+  //   setResourcesArray(resources_array.push(e.target.value));
+  // };
 
 
 
   const updateTechArray = (e) => {
-    let array = tech_array.concat(Number(e.target.value));
+    let array = [];
+    if (!tech_array.includes(Number(e.target.value))) array = tech_array.concat(Number(e.target.value));
+    if (tech_array.includes(Number(e.target.value))) array = tech_array.filter(tech => tech !== Number(e.target.value));
+
     setTechArray(array);
+    console.log(tech_array);
   };
 
 
@@ -116,6 +120,7 @@ function Projects() {
               type="text"
               value={github_link}
               onChange={updateGithubLink}
+              maxLength="100"
             />
           </div>
           <div className="formDesc">
@@ -124,6 +129,7 @@ function Projects() {
               type="text"
               value={description}
               onChange={updateDescription}
+              maxLength="500"
             />
           </div>
           <div className="formTech">

@@ -15,6 +15,7 @@ function AddResourceForm({categories}) {
   const [description, setDescription] = useState('');
   const [ref_link, setRef_Link] = useState('');
   const [cat_id, setCatId] = useState(1);
+  const [resourceAdded, setResourceAdded] = useState(false);
 
 
 
@@ -28,12 +29,13 @@ function AddResourceForm({categories}) {
       cat_id
     };
     await dispatch(addResource(resource));
-    // if (response.ok) {
-      // history.push('/');
-      await dispatch(getResources());
-    // } else {
-      // setErrors(response.errors);
-    // }
+    await dispatch(getResources());
+    setName('');
+    setDescription('');
+    setRef_Link('');
+    setCatId(1);
+    setResourceAdded(true);
+    setTimeout(() => {setResourceAdded(false)}, 2.5*1000);
   };
 
 
@@ -67,7 +69,9 @@ const updateRef_link = (e) => {
         <input
             type='text'
             value={name}
-            onChange={updateName} />
+            onChange={updateName}
+            maxLength="80"
+            />
       </div>
       <div>
         <label>Category</label>
@@ -96,6 +100,7 @@ const updateRef_link = (e) => {
       </div>
 
     <button type='submit'>Add</button>
+    {resourceAdded && <div>Resource Added!</div>}
     </form>
   )
 
