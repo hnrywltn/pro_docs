@@ -2,8 +2,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LogoutButton from './auth/LogoutButton';
+import { useSelector } from 'react-redux';
 
 const NavBar = () => {
+
+
+
+  const session = useSelector(state => state.session);
+  let user = session.user;
+
+
+
+
   return (
     <nav className="navbar">
       <Link to='/'  className="navlink">
@@ -22,7 +32,7 @@ const NavBar = () => {
         Projects
       </Link>
 
-      <LogoutButton />
+      {user?.id&&<LogoutButton />}
     </nav>
   );
 }
