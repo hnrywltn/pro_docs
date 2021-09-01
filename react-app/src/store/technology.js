@@ -11,7 +11,7 @@ const load = technologies => ({
 
 export const getTechnologies = () => async (dispatch) => {
   console.log('getTechnologies!!!!!!!!!!!!');
-  const res = await fetch('/api/technologies');
+  const res = await fetch('/api/technologies/');
   if(res.ok) {
     const technologies = await res.json();
     dispatch(load(technologies));
