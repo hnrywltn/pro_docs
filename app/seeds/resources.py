@@ -88,7 +88,7 @@ def seed_resources():
     description="In this video, we'll go over the basics of what git is and how to use it within the command-line.",
   )
   htmloverview= Resource(
-    name="https://webapps-for-beginners.rubymonstas.org/html.html",
+    name="Basic overview of HTML",
     cat_id=6,
     ref_link="https://webapps-for-beginners.rubymonstas.org/html.html",
     description="This is a great overview of HTML, and will get you started",
