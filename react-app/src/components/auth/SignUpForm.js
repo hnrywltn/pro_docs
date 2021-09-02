@@ -53,7 +53,8 @@ const SignUpForm = () => {
   }
 
   return (
-    <form onSubmit={onSignUp}>
+    <form className="authForm" onSubmit={onSignUp}>
+      <h1>Sign Up</h1>
       <div>
         {errors.map((error, ind) => (
           <div key={ind}>{error}</div>
@@ -88,6 +89,7 @@ const SignUpForm = () => {
           pattern="https://www.linkedin.com/.*"
           size="100"
           maxLength='100'
+          className="linkedinInputauth"
           type='url'
           name='linkedin'
           onChange={updateLinkedin}

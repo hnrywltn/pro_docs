@@ -8,7 +8,9 @@
   grid-template-rows: repeat(10, 10%);
 	height: 100vh;
 }
-
+ .addProjectFormLINK {
+   width: 50%;
+ }
 
 
 
@@ -48,7 +50,11 @@
   grid-template-rows: repeat(9, 10%);
   grid-column: 1 / 5;
   grid-row: 1 / 6;
-  background-color: aqua;
+  background-color: rgb(65, 65, 65);
+  border-radius: 10px;
+  color: snow;
+  font-family: monospace;
+  font-size: 1.5em;
   overflow-y: scroll;
   justify-items: center;
 }
@@ -61,6 +67,7 @@
 .formDesc {
   grid-column: 1 / end;
   grid-row: 4 / 5;
+  justify-self: left;
 }
 
 .formTech {

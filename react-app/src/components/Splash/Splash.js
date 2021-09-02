@@ -44,7 +44,7 @@ function Splash() {
       <a href="https://www.linkedin.com/in/henry-walton-324977187/" target="_blank" rel="noreferrer" className="splashLinkden">
         <img src="https://i.imgur.com/yHgUB15.png" alt="login"/>
       </a>
-      <a href="https://github.com/hnrywltn" target="_blank" rel="noreferrer" className="splashgithub">
+      <a href="https://github.com/hnrywltn/pro_docs" target="_blank" rel="noreferrer" className="splashgithub">
         <img src="https://i.imgur.com/35z8Aim.png" alt="login"/>
       </a>
     </div>

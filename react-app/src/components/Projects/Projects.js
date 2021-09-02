@@ -59,6 +59,10 @@ function Projects() {
       github_link,
       complete
     };
+    setGithubLink('');
+    setDescription('');
+    setTechArray([]);
+
     await dispatch(addProject(project));
     await dispatch(getProjects());
   };
@@ -123,11 +127,14 @@ function Projects() {
           <div className="formGithubLink">
             <label>Github_link</label>
             <input
-              type="text"
+              className="addProjectFormLINK"
+              type='url'
               value={github_link}
-              onChange={updateGithubLink}
+              pattern="https://github.com/.*" size="100"
               maxLength="100"
-            />
+              placeholder="https://github.com/{githubhandle}/{projectname}"
+              onChange={updateGithubLink}
+            required />
           </div>
           <div className="formDesc">
             <label>Description</label>

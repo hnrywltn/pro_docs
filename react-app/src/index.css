@@ -26,6 +26,30 @@ html, body {
 	height: 100vh;
 }
 
+form {
+  border-radius: 10px;
+  color: snow;
+  font-family: monospace;
+  font-size: 1.5em;
+  justify-items: center;
+}
+
+.authForm {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #4d4d4d;
+	grid-column: 5 / 11;
+	grid-row: 6 / 17;
+}
+
+
+
+.linkedinInputauth {
+	width: 40%;
+}
+
 .navbar {
 	display: flex;
 	grid-column: 1 / 3;

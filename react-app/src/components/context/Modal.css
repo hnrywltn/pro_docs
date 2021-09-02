@@ -24,8 +24,14 @@
 }
 
 #modal-content {
+  display: grid;
+  border-radius: 5px;
+  grid-template-columns: repeat(10, 10%);
+  grid-template-rows: repeat(10, 10%);
   position: absolute;
-  background-color:white;
+  background-color:#616161e1;
+  height: 60vh;
+  width: 60vw;
 }
 
 .test {
