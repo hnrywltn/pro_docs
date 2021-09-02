@@ -4,11 +4,11 @@ from app.models import db, User
 # Adds a demo user, you can add other users here if you want
 def seed_users():
     demo = User(
-        github_handle='Demo', email='demo@aa.io', password='password', linkdin='https://thispersondoesnotexist.com/', bio='I\'ve been a software engineer for over 10 years, and I love to build web applications. I love to learn new things, and I\'m always looking for a challenge. I\'m also a big fan of learning about the world and trying to understand it. I love to learn about the human mind and how we think and feel.')
+        github_handle='Demo', email='demo@aa.io', password='password', linkedin='https://thispersondoesnotexist.com/', bio='I\'ve been a software engineer for over 10 years, and I love to build web applications. I love to learn new things, and I\'m always looking for a challenge. I\'m also a big fan of learning about the world and trying to understand it. I love to learn about the human mind and how we think and feel.')
     marnie = User(
-        github_handle='marnie', email='marnie@aa.io', password='password', linkdin='https://thispersondoesnotexist.com/', bio='I\'ve been a software engineer for over 10 years, and I love to build web applications. I love to learn new things, and I\'m always looking for a challenge. I\'m also a big fan of learning about the world and trying to understand it. I love to learn about the human mind and how we think and feel.')
+        github_handle='marnie', email='marnie@aa.io', password='password', linkedin='https://thispersondoesnotexist.com/', bio='I\'ve been a software engineer for over 10 years, and I love to build web applications. I love to learn new things, and I\'m always looking for a challenge. I\'m also a big fan of learning about the world and trying to understand it. I love to learn about the human mind and how we think and feel.')
     bobbie = User(
-        github_handle='bobbie', email='bobbie@aa.io', password='password', linkdin='https://thispersondoesnotexist.com/', bio='I\'ve been a software engineer for over 10 years, and I love to build web applications. I love to learn new things, and I\'m always looking for a challenge. I\'m also a big fan of learning about the world and trying to understand it. I love to learn about the human mind and how we think and feel.')
+        github_handle='bobbie', email='bobbie@aa.io', password='password', linkedin='https://thispersondoesnotexist.com/', bio='I\'ve been a software engineer for over 10 years, and I love to build web applications. I love to learn new things, and I\'m always looking for a challenge. I\'m also a big fan of learning about the world and trying to understand it. I love to learn about the human mind and how we think and feel.')
 
 
     db.session.add(demo)

@@ -10,7 +10,7 @@ class User(db.Model, UserMixin):
     github_handle = db.Column(db.String(40), nullable=False, unique=True)
     email = db.Column(db.String(255), nullable=False, unique=True)
     hashed_password = db.Column(db.String(255), nullable=False)
-    linkdin = db.Column(db.String(50), nullable=False)
+    linkedin = db.Column(db.String(100), nullable=False)
     bio = db.Column(db.Text, nullable=False)
 
 
@@ -28,8 +28,9 @@ class User(db.Model, UserMixin):
     def to_dict(self):
         return {
             'id': self.id,
-            'username': self.github_handle,
+            'github_handle': self.github_handle,
             'email': self.email,
-            'linkdin': self.linkdin,
+            'linkedin': self.linkedin,
             'bio': self.bio,
+
         }

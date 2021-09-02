@@ -27,11 +27,10 @@ function Projects() {
 
   const user = session.user;
 
-  const usersProjects = projectsArray.filter(project => project.user_id === user.id);
+  const usersProjects = projectsArray.filter(project => project.user_id === user.id).reverse();
 
 
 
-  // const [user_id] = useState(user.id);
   const [resources_array] = useState([]);
   const [tech_array, setTechArray] = useState([]);
   const [wireframing_array] = useState(null);
@@ -92,17 +91,22 @@ function Projects() {
     setGithubLink(e.target.value);
   };
 
-  // const updateComplete = (e) => {
-  //   setComplete(e.target.value);
-  // };
 
 
+  let emptyProjectDom = (
+    <div className="empty-project-container">
+      <h1>You have no projects!</h1>
+      <h2>Create a new project above!</h2>
+    </div>
+  )
 
 
   let projectsDom = (
     <>
       <div className="projects-container">
-
+        <div className="emptyProjectDom projectList">
+          {!usersProjects.length && emptyProjectDom}
+        </div>
         <div className="projectList">
           {usersProjects && usersProjects.map(project => {
             return (

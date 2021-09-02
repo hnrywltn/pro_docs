@@ -35,7 +35,12 @@
 }
 
 
-
+.emptyProjectDom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+}
 
 .projects-container form {
   display: grid;

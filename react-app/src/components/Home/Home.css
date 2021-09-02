@@ -157,7 +157,16 @@
 }
 
 
-
+.empty-github-container, .failedSearch-github-container{
+  font-family: monospace;
+  font-size: 1.5rem;
+  grid-column: 2 / 6;
+  color: brown;
+  grid-row: 2 / end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 

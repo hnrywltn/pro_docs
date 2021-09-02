@@ -62,10 +62,13 @@ def sign_up():
     form = SignUpForm()
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
+        print("!!!!!!!!!!!!!!!", form.data)
         user = User(
-            username=form.data['username'],
+            github_handle=form.data['github_handle'],
             email=form.data['email'],
-            password=form.data['password']
+            password=form.data['password'],
+            bio=form.data['bio'],
+            linkedin=form.data['linkedin'],
         )
         db.session.add(user)
         db.session.commit()

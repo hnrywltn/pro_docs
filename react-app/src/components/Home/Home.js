@@ -25,7 +25,7 @@ function Home() {
 
 
   const [gitHubHandle, setGitHubHandle] = useState('');
-  const [person, setPerson] = useState('');
+  const [person, setPerson] = useState(null);
   const [publicRepos, setPublicRepos] = useState(null);
 
 
@@ -49,15 +49,24 @@ function Home() {
     });
 
 
+  let emptyGithubDom = (
+    <div className="empty-github-container">
+      <h3>Enter a github handle to search github!</h3>
+    </div>
+  );
 
-
+  let failedSearchDom = (
+    <div className="failedSearch-github-container">
+      <h3>Make sure the github user is public and spelled correctly!</h3>
+    </div>
+  );
 
 
     function createMatrix(catTuples, matrix = []) {
       if (!catTuples.length) {
         return matrix;
       }
-      const [catId, resourceId] = catTuples[0];
+      const [catId] = catTuples[0];
       const resourcesWithCatId = resourceList.filter(resource => {
         return resource.cat_id === catId;
       });
@@ -138,6 +147,8 @@ function Home() {
 
     <div className="githubAPI-container">
       <h2>GitHub</h2>
+      {!person && emptyGithubDom}
+      {person?.message === 'Not Found' && failedSearchDom}
       <form
         onSubmit={handleGitHubSubmit}
         className="github-form"
