@@ -11,6 +11,10 @@ html, body {
 	height: 100vh;
 }
 
+.errors {
+	font-family: monospace;
+	color: red;
+}
 
 #root {
 	box-sizing: border-box;

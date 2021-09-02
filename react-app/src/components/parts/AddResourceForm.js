@@ -21,22 +21,29 @@ function AddResourceForm({categories}) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const resource = {
-      name,
-      user_id,
-      description,
-      ref_link,
-      cat_id
-    };
-    await dispatch(addResource(resource));
-    await dispatch(getResources());
-    setName('');
-    setDescription('');
-    setRef_Link('');
-    setCatId(1);
-    setResourceAdded(true);
-    setTimeout(() => {setResourceAdded(false)}, 2.5*1000);
+    if (!name.split('').filter(letter => letter !== ' ').length || !description.split('').filter(letter => letter !== ' ').length) {
+      setErrors(['Name and description are required']);
+    } else {
+        const resource = {
+          name,
+          user_id,
+        description,
+        ref_link,
+        cat_id
+      };
+      await dispatch(addResource(resource));
+      await dispatch(getResources());
+      setErrors([]);
+      setName('');
+      setDescription('');
+      setRef_Link('');
+      setCatId(1);
+      setResourceAdded(true);
+      setTimeout(() => {setResourceAdded(false)}, 2.5*1000);
+    }
   };
+
+
 
 
 const updateName = (e) => {
@@ -60,6 +67,7 @@ const updateRef_link = (e) => {
       onSubmit={handleSubmit}
     >
       {resourceAdded && <div>Resource Added!</div>}
+
       <div className="errors">
           {errors.map((error, ind) => (
               <div key={ind}>{error}</div>
