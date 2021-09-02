@@ -12,11 +12,6 @@ import './Projects.css';
 function Projects() {
 
   const dispatch = useDispatch();
-  // const history = useHistory();
-
-  // const resources = useSelector(state => {
-  //   return state.resources;
-  // });
   const session = useSelector(state => {
     return state.session;
   });
@@ -108,6 +103,13 @@ function Projects() {
     <>
       <div className="projects-container">
 
+        <div className="projectList">
+          {usersProjects && usersProjects.map(project => {
+            return (
+              <Project project={project} key={project.id} />
+            )
+          })}
+        </div>
 
         <form
           className="projects-form"
@@ -143,17 +145,6 @@ function Projects() {
               );
             })}
           </div>
-          {/* <div className="formRes">
-            <h2>Resources</h2>
-            {Object.values(resources).map(resource => {
-              return (
-                <div className="resBox" key={resource.id}>
-                  {resource.name}
-                  <input type="checkbox" value={resource.id} onChange={updateResourcesArray}/>
-                </div>
-              );
-            })}
-          </div> */}
           <button type="submit">Submit</button>
 
         </form>
@@ -161,13 +152,6 @@ function Projects() {
 
 
 
-        <div className="projectList">
-          {usersProjects && usersProjects.map(project => {
-            return (
-              <Project project={project} key={project.id} />
-            )
-          })}
-        </div>
       </div>
     </>
   );

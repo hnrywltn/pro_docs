@@ -101,6 +101,7 @@ const updateRef_link = (e) => {
             type='url'
             value={ref_link}
             pattern="https://.*" size="100"
+            maxLength="100"
             placeholder="https:// {url}"
             onChange={updateRef_link}
             required />

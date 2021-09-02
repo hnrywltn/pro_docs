@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: repeat(10, 10%);
   grid-template-rows: repeat(10, 10%);
+	height: 100vh;
 }
 
 
@@ -13,19 +14,35 @@
 
 .projectList {
   grid-column: 1 / end;
-  grid-row: 5 / end;
+  grid-row: 6 / end;
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  grid-template-rows: auto;
+  overflow-y: scroll;
+  height: 50vh;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+
 }
 
+.projectDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  background-color: #888888;
+}
 
 
 
 
 .projects-container form {
   display: grid;
-  grid-template-columns: repeat(10, 10%);
-  grid-template-rows: repeat(10, 10%);
+  grid-template-columns: repeat(9, 10%);
+  grid-template-rows: repeat(9, 10%);
   grid-column: 1 / 5;
-  grid-row: 1 / 5;
+  grid-row: 1 / 6;
   background-color: aqua;
   overflow-y: scroll;
   justify-items: center;

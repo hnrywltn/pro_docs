@@ -155,9 +155,9 @@ print('add code snippet 1 here')
 ## Contact
 
 ### {Your Name}
-<a href="https://www.linkedin.com/in/{linkedin-handle}/"><img src="./readme-assets/logos/linkedin-logo.png" height="28" align="middle" /></a>
+<a href="https://www.linkedin.com/in/hnrywltn/"><img src="./readme-assets/logos/linkedin-logo.png" height="28" align="middle" /></a>
 <a href="https://angel.co/u/{angel-list-handle}"><img src="./readme-assets/logos/angellist-logo.png" height="28" align="middle" /></a>
-<a href="https://github.com/{github-handle}"><img src="./readme-assets/logos/github-logo.png" height="38" align="middle" /></a>
+<a href="https://github.com/hnrywltn"><img src="./readme-assets/logos/github-logo.png" height="38" align="middle" /></a>
 
 {email}
 
