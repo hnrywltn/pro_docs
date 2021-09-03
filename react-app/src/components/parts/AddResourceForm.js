@@ -63,7 +63,7 @@ const updateRef_link = (e) => {
 
   let resourceForm = (
     <form
-      className='form formstyle'
+      className='authForm addResourceForm'
       onSubmit={handleSubmit}
     >
       {resourceAdded && <div>Resource Added!</div>}
@@ -74,48 +74,51 @@ const updateRef_link = (e) => {
           ))}
       </div>
       <div className="inputHolder">
-        <label>Name</label>
+        {/* <label>Name</label> */}
         <input
             type='text'
             value={name}
+            placeholder='Name'
             onChange={updateName}
             maxLength="80"
             required
             />
       </div>
       <div className="inputHolder">
-        <label>Category</label>
+        {/* <label>Description</label> */}
+        <input
+            type='text'
+            value={description}
+            onChange={updateDescription}
+            placeholder='Description'
+            required/>
+      </div>
+      <div className="inputHolder">
+        {/* <label>Reference Link</label> */}
+        <input
+            // className="addresourceFormLINK"
+            type='url'
+            value={ref_link}
+            pattern="https://.*"
+            maxLength="100"
+            placeholder="https:// {url}"
+            onChange={updateRef_link}
+            required />
+      </div>
+      <div >
+        {/* <label>Category</label> */}
         <select
             value={cat_id}
             onChange={(e) => setCatId(e.target.value)}
+            className="inputHolderCat"
         >
           {Object.values(categories).map((category, i) => (
               <option key={i} value={category.id}>{category.cat}</option>
           ))}
         </select>
       </div>
-      <div className="inputHolder">
-        <label>Description</label>
-        <input
-            type='text'
-            value={description}
-            onChange={updateDescription}
-            required/>
-      </div>
-      <div className="inputHolder">
-        <label>Reference Link</label>
-        <input
-            className="addresourceFormLINK"
-            type='url'
-            value={ref_link}
-            pattern="https://.*" size="100"
-            maxLength="100"
-            placeholder="https:// {url}"
-            onChange={updateRef_link}
-            required />
-      </div>
 
-    <button type='submit'>Add</button>
+    <button type='submit'>Add A Resource</button>
 
     </form>
   )

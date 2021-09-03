@@ -51,7 +51,8 @@ function Home() {
 
   let emptyGithubDom = (
     <div className="empty-github-container">
-      <h3>Enter a github handle to search github!</h3>
+      {/* <h3>How to use the site:</h3> */}
+      <h4>In the section above, you will find resources that can help inspire you and ones that you can use as resources while working on projects. Create your own resource collection by entering a link in the the proper format along with a name and description. Enter a github handle on the left to search github!</h4>
     </div>
   );
 
@@ -104,6 +105,11 @@ function Home() {
       const data = await response.json();
       setPerson(data);
       console.log('person', person);
+      // if (!person?.name && !person?.message) {
+      //   let obj = person;
+      //   obj['name'] = gitHubHandle;
+      //   setPerson(obj);
+      // }
       setGitHubHandle('');
       updatePublicRepos(data);
     }
@@ -120,7 +126,7 @@ function Home() {
 
       <div className="resources-container">
         <div className="resourceAdd">
-          <h2>Add a Resource</h2>
+          {/* <h2>Add a Resource</h2> */}
           <AddResourceForm categories={categories} />
         </div>
 
@@ -148,7 +154,7 @@ function Home() {
     <div className="githubAPI-container">
       <h2>GitHub</h2>
       {!person && emptyGithubDom}
-      {person?.message === 'Not Found' && failedSearchDom}
+      {(person?.message === 'Not Found' || person?.name === null) && failedSearchDom}
       <form
         onSubmit={handleGitHubSubmit}
         className="github-form"

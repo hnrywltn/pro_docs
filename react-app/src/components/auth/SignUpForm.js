@@ -21,6 +21,8 @@ const SignUpForm = () => {
       if (data) {
         setErrors(data)
       }
+    } else {
+      setErrors(['Passwords do not match'])
     }
   };
 
@@ -54,28 +56,30 @@ const SignUpForm = () => {
 
   return (
     <form className="authForm" onSubmit={onSignUp}>
-      <h1>Sign Up</h1>
-      <div>
+      {/* <h1>Sign Up</h1> */}
+      <div className="errors">
         {errors.map((error, ind) => (
           <div key={ind}>{error}</div>
         ))}
       </div>
       <div>
-        <label>Github Handle</label>
+        {/* <label>Github Handle</label> */}
         <input
           type='text'
           name='github_handle'
           maxLength='50'
           required
+          placeholder='Github Handle'
           onChange={updateGithub_handle}
           value={github_handle}
         ></input>
       </div>
       <div>
-        <label>Email</label>
+        {/* <label>Email</label> */}
         <input
           type='text'
           name='email'
+          placeholder='Email'
           maxLength='50'
           required
           onChange={updateEmail}
@@ -83,11 +87,10 @@ const SignUpForm = () => {
         ></input>
       </div>
       <div>
-        <label>linkedin</label>
+        {/* <label>linkedin</label> */}
         <input
           placeholder="https://www.linkedin.com/..."
           pattern="https://www.linkedin.com/.*"
-          size="100"
           maxLength='100'
           className="linkedinInputauth"
           type='url'
@@ -97,21 +100,23 @@ const SignUpForm = () => {
         ></input>
       </div>
       <div>
-        <label>Bio</label>
+        {/* <label>Bio</label> */}
         <input
           type='text'
           name='bio'
           maxLength='400'
+          placeholder='Bio'
           required
           onChange={updateBio}
           value={bio}
         ></input>
       </div>
       <div>
-        <label>Password</label>
+        {/* <label>Password</label> */}
         <input
           type='password'
           maxLength='50'
+          placeholder='Password'
           name='password'
           required
           onChange={updatePassword}
@@ -119,10 +124,11 @@ const SignUpForm = () => {
         ></input>
       </div>
       <div>
-        <label>Repeat Password</label>
+        {/* <label>Repeat Password</label> */}
         <input
           type='password'
           name='repeat_password'
+          placeholder='Repeat Password'
           maxLength='50'
           required
           onChange={updateRepeatPassword}

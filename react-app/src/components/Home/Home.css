@@ -5,7 +5,8 @@
   display: grid;
   grid-template-columns: repeat(20, 5%);
   grid-template-rows: repeat(20, 5vh);
-  /* overflow: scroll; */
+  overflow: hidden;
+  height: 100vh;
 }
 
 
@@ -14,8 +15,21 @@
 
 
 ::-webkit-scrollbar {
-  display: none;
+  border-radius: 10px;
 }
+
+::-webkit-scrollbar-track-piece {
+  background: #a7a7a7;
+  border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(73, 73, 73);
+  border-radius: 10px;
+}
+
+
 
 .githubAPI-container {
   grid-template-columns: repeat(5, 20%);
@@ -49,8 +63,7 @@
   align-items: center;
   grid-row: 2 / 6;
   grid-column: 1 / 2;
-  /* width: 100%; */
-  background-color: aliceblue;
+	background-color: #4d4d4d;
   border-radius: 30px;
   margin-bottom: 20px;
   margin-left: 20px;
@@ -60,7 +73,7 @@
 
 .githubAPI-container form input {
   width: 80%;
-  height: 35%;
+  height: 25%;
   font-size: 1.35rem;
   border: none;
   border-bottom: 2px solid #000;
@@ -71,9 +84,10 @@
 
 .githubAPI-container form button {
   width: 80%;
-  height: 30%;
+  height: 20%;
   font-size: 25px;
-  border: none;
+  margin-top: 40px;
+  /* border: 1px solid #000; */
   background-color: rgba(165, 42, 42, 0.589);
   border-radius: 30px;
   font-family: monospace;
@@ -157,7 +171,19 @@
 }
 
 
-.empty-github-container, .failedSearch-github-container{
+.empty-github-container {
+  font-family: monospace;
+  font-size: 1.5rem;
+  grid-column: 2 / 6;
+  padding-left: 40px;
+  padding-right: 40px;
+  grid-row: 2 / end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.failedSearch-github-container {
   font-family: monospace;
   font-size: 1.5rem;
   grid-column: 2 / 6;
@@ -167,7 +193,6 @@
   justify-content: center;
   align-items: center;
 }
-
 
 
 .resources-container {
@@ -201,7 +226,6 @@
   align-items: center;
   height: 300px;
   grid-row:1 / 2;
-  overflow-y: scroll;
   background-color: #9b9b9b;
   border-radius: 10%;
   border-top: 5px solid rgba(34, 34, 34, 0.561);
