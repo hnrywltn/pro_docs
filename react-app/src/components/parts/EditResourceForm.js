@@ -60,6 +60,7 @@ function EditResourceForm({resource, setShowform}) {
                         type='text'
                         placeholder='Name'
                         value={name}
+                        required
                         onChange={updateName} />
                 </div>
                 <div>
@@ -68,6 +69,7 @@ function EditResourceForm({resource, setShowform}) {
                         type='text'
                         placeholder='Description'
                         value={description}
+                        required
                         onChange={updateDescription} />
                 </div>
                 <div>
@@ -77,6 +79,7 @@ function EditResourceForm({resource, setShowform}) {
                         value={ref_link}
                         pattern="https://.*"
                         maxLength="100"
+                        required
                         placeholder="https:// {url}"
                         onChange={updateRef_link}
                     />
