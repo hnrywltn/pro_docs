@@ -27,9 +27,9 @@ function AddResourceForm({categories}) {
         const resource = {
           name,
           user_id,
-        description,
-        ref_link,
-        cat_id
+          description,
+          ref_link,
+          cat_id
       };
       await dispatch(addResource(resource));
       await dispatch(getResources());
@@ -105,8 +105,7 @@ const updateRef_link = (e) => {
             onChange={updateRef_link}
             required />
       </div>
-      <div >
-        {/* <label>Category</label> */}
+      {/* <div >
         <select
             value={cat_id}
             onChange={(e) => setCatId(e.target.value)}
@@ -116,9 +115,9 @@ const updateRef_link = (e) => {
               <option key={i} value={category.id}>{category.cat}</option>
           ))}
         </select>
-      </div>
+      </div> */}
 
-    <button type='submit'>Add A Resource</button>
+    <button type='submit'>Add To Your Resources</button>
 
     </form>
   )
