@@ -4,7 +4,7 @@ import {useEffect, useState} from 'react';
 import  EditProjectForm  from './EditProjectForm.js';
 
 
-function Project({project}) {
+function Project({project, technologies}) {
 
   const [showModal, setShowModal] = useState(false);
   const [showEditForm, setShowEditForm] = useState(false);
@@ -13,6 +13,13 @@ function Project({project}) {
   function editClick() {
     setShowEditForm(true);
   }
+
+  let technologiesArray = Object.values(technologies);
+
+  let techIdArray = JSON.parse(project?.tech_array);
+  let projectTechnologies = technologiesArray?.filter(technology => {
+    return techIdArray.includes(technology.id);
+  });
 
 
   let editDom = null;
@@ -24,8 +31,16 @@ function Project({project}) {
   if (!showEditForm) {
     editDom = (
       <div className="projectPreview-container">
-        <p>{project.github_link}</p>
-        <p>{project.description}</p>
+        <a href={project.github_link} rel="noreferrer" target="blank" className="projectPreview-githublink">{project.github_link}</a>
+        <p className="projectPreview-description">{project.description}</p>
+        <h4 className="projectPreview-techarray-container-title">Technologies</h4>
+        <h4 className="projectPreview-description-title">Description</h4>
+        <div className="projectPreview-techarray-container">
+          {projectTechnologies?.map(technology => {
+            return <p>{technology.name}</p>
+          }
+          )}
+        </div>
         <button onClick={editClick}>Edit / Delete</button>
       </div>
     )

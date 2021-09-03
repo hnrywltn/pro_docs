@@ -117,7 +117,7 @@ function Projects() {
         <div className="projectList">
           {usersProjects && usersProjects.map(project => {
             return (
-              <Project project={project} key={project.id} />
+              <Project project={project} key={project.id} technologies={technologies} />
             )
           })}
         </div>
