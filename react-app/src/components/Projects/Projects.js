@@ -62,7 +62,7 @@ function Projects() {
     setGithubLink('');
     setDescription('');
     setTechArray([]);
-
+    window.location.reload();
     await dispatch(addProject(project));
     await dispatch(getProjects());
   };
@@ -108,6 +108,9 @@ function Projects() {
   let projectsDom = (
     <>
       <div className="projects-container">
+        <div className="projects-description">
+          Keep track of past, current, and future projects. Add a description, github link, and technologies on the left and view your project information below.
+        </div>
         <div className="emptyProjectDom projectList">
           {!usersProjects.length && emptyProjectDom}
         </div>
@@ -123,24 +126,25 @@ function Projects() {
           className="projects-form"
           onSubmit={handleSubmit}
         >
-          <h2>Add a Project</h2>
+          {/* <h2>Add a Project</h2> */}
           <div className="formGithubLink">
-            <label>Github_link</label>
+            {/* <label>Github_link</label> */}
             <input
-              className="addProjectFormLINK"
+              // className="addProjectFormLINK"
               type='url'
               value={github_link}
-              pattern="https://github.com/.*" size="100"
+              pattern="https://github.com/.*"
               maxLength="100"
               placeholder="https://github.com/{githubhandle}/{projectname}"
               onChange={updateGithubLink}
             required />
           </div>
           <div className="formDesc">
-            <label>Description</label>
+            {/* <label>Description</label> */}
             <input
               type="text"
               value={description}
+              placeholder="Description"
               onChange={updateDescription}
               maxLength="500"
             />
@@ -156,7 +160,7 @@ function Projects() {
               );
             })}
           </div>
-          <button type="submit">Submit</button>
+          <button className="projectBttn" type="submit">Add a Project</button>
 
         </form>
 

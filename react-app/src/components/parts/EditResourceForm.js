@@ -48,32 +48,38 @@ function EditResourceForm({resource, setShowform}) {
     };
 
     let resourceForm = (
-            <form className='form formstyle' onSubmit={handleSubmit}>
+            <form className='form formstyle editRecourceForm' onSubmit={handleSubmit}>
                 <div className="errors">
                     {errors.map((error, ind) => (
                         <div key={ind}>{error}</div>
                     ))}
                 </div>
                 <div>
-                    <label>Name</label>
+                    {/* <label>Name</label> */}
                     <input
                         type='text'
+                        placeholder='Name'
                         value={name}
                         onChange={updateName} />
                 </div>
                 <div>
-                    <label>Description</label>
+                    {/* <label>Description</label> */}
                     <input
                         type='text'
+                        placeholder='Description'
                         value={description}
                         onChange={updateDescription} />
                 </div>
                 <div>
-                    <label>Reference Link</label>
+                    {/* <label>Reference Link</label> */}
                     <input
-                        type='text'
+                        type='url'
                         value={ref_link}
-                        onChange={updateRef_link} />
+                        pattern="https://.*"
+                        maxLength="100"
+                        placeholder="https:// {url}"
+                        onChange={updateRef_link}
+                    />
                 </div>
 
                 <button type='submit'>Edit</button>

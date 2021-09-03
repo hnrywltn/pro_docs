@@ -66,7 +66,7 @@
 .formDesc {
   grid-column: 1 / end;
   grid-row: 4 / 5;
-  justify-self: left;
+  /* justify-self: left; */
 }
 
 .formTech {
@@ -90,15 +90,32 @@
   overflow-y: scroll;
 } */
 
-/* .formRes input {
-  height:20px;
-} */
-
-.projects-container form button {
+.projectBttn {
   grid-column: 1 / end;
   grid-row: 9 / end;
-  width: 100%;
+	margin: 15px;
+	color: snow;
+	font-family: monospace;
+	font-size: 1.5em;
+	border-radius: 10px;
+	background-color: rgb(71, 71, 71);
+	padding: 5px;
+  width: 80%;
 }
+
+.projects-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: monospace;
+  font-size: 2em;
+  color: snow;
+  padding: 30px;
+  grid-column: 5 / 11;
+  grid-row: 1 / 6;
+}
+
 
 .projects-container form h2 {
   grid-column: 1 / end;

@@ -11,7 +11,13 @@
 
 
 
-
+.editRecourceForm button {
+  margin-top: 10px;
+  background: #363636;
+  border-radius: 10px;
+  color: snow;
+  padding: 5px;
+}
 
 
 ::-webkit-scrollbar {
@@ -29,7 +35,12 @@
   border-radius: 10px;
 }
 
-
+.resource button {
+  background: #363636;
+  border-radius: 10px;
+  color: snow;
+  padding: 5px;
+}
 
 .githubAPI-container {
   grid-template-columns: repeat(5, 20%);
@@ -98,6 +109,7 @@
   grid-template-rows: repeat(5, 20%);
   grid-row: 2 / end;
   grid-column: 2 / end;
+  /* text-align: center; */
   display: grid;
   overflow: hidden;
   font-family: monospace;
