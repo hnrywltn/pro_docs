@@ -57,14 +57,19 @@ function EditProjectForm({project, setShowEditForm}) {
                     <input
                         type='text'
                         value={description}
+                        required
                         onChange={updateDescription} />
                 </div>
                 <div>
                     <label>Reference Link</label>
                     <input
-                        type='text'
+                        type='url'
                         value={github_link}
-                        onChange={updateGithubLink} />
+                        pattern="https://github.com/.*"
+                        maxLength="100"
+                        placeholder="https://github.com/{githubhandle}/{projectname}"
+                        onChange={updateGithubLink}
+                        required />
                 </div>
 
                 <button type='submit'>Edit</button>

@@ -3,7 +3,7 @@
 </p>
 
 # prodocs
-prodocs is an app where you can collect different resources and reference a long list of prepopulated ones. You can also keep track of and edit projects that you're working on. It is a fullstack React App made with a Redux state manager and a backend using Python, Flask, SQL-Alchemy, and PostgresSQL and any other technologies.
+prodocs is an app where you can collect different resources and reference a long list of prepopulated ones. You can also keep track of and edit projects that you're working on. It is a fullstack React App made with a Redux state manager and a backend using Python, Flask, SQL-Alchemy, and PostgresSQL and GitHubs' API.
 
 * View the <a href='https://prodocs.herokuapp.com/'>prodocs</a> App Live
 
@@ -13,10 +13,9 @@ prodocs is an app where you can collect different resources and reference a long
 | ----------------- |
 | 1. [Features](#features) |
 | 2. [Installation](#installation) |
-| 3. [Technical Implementation Details](#technical-implementation-details) |
-| 4. [Future Features](#future-features) |
-| 5. [Contact](#contact) |
-| 6. [Special Thanks](#special-thanks) |
+| 3. [Future Features](#future-features) |
+| 4. [Contact](#contact) |
+| 5. [Special Thanks](#special-thanks) |
 
 
 ## Technologies
@@ -37,29 +36,22 @@ prodocs is an app where you can collect different resources and reference a long
 ![Sign Up](./readme-assets/images/signup.jpg)
 ![Login](./readme-assets/images/login.jpg)
 
-### Feed Page
-prodocs feed displays all {resource-1-plural}
-Discover and search for new {resource-1-plural}
-![Feed Page](./readme-assets/images/feed.jpg)
+### Resource Collection
+prodocs feed displays all resources
+Save and build your own resource collection.
+![Home Page](./readme-assets/images/home.jpg)
+![Resources](./readme-assets/images/home2.jpg)
 
-### View {resource-1}
-Single {resource-1} of name, photos, {resource-2-plural}
-![{resource-1} Page](./readme-assets/images/{resource-1}-page.jpg)
+### Github Searching
+Search for other GitHub users and see lists of their public repos.
+![github Page](./readme-assets/images/github.jpg)
 
-### Add {resource-1}
-Add a new {resource-1} to the database
-![Add {resource-1}](./readme-assets/images/{resource-1}-add.jpg)
-Cancel adding {resource-1}
-![Cancel Add {resource-1}](./readme-assets/images/{resource-1}-add-cancel.jpg)
+### Project Collection
+Add new projects and collect different projects you want to track.
+![Project List](./readme-assets/images/projectForm.jpg)
 
-### Create, Read, Update, Delete {resource-1} {resource-2-plural}
-View {resource-2-plural}
-![{resource-2-plural}](./readme-assets/images/{resource-2-plural}.png)
-Edit and Add {resource-2-plural} in the database
-![Edit {resource-2-plural}](./readme-assets/images/{resource-2-plural}-edit.png)
-![Add {resource-2-plural}](./readme-assets/images/{resource-2-plural}-add.png)
 
-* Add any more features here
+
 
 ## Installation
 To build/run project locally, please follow these steps:
@@ -67,7 +59,7 @@ To build/run project locally, please follow these steps:
 1. Clone this repository
 
 ```shell
-git clone https://github.com/{github-handle}/prodocs.git
+git clone https://github.com/hnrywltn/pro_docs.git
 ```
 
 2. Install Pipfile dependencies and create the virtual environment
@@ -118,50 +110,28 @@ npm start
 ```
 
 
-## Technical Implementation Details
 
-### {Detail 1}
-Description 1
-
-Part of code is shown below:
-
-```python
-print('add code snippet 1 here')
-```
-
-Description 2
-
-```javascript
-print('add code snippet 2 here')
-```
-
-### {Detail 2}
-Description 1
-
-Code snippet is shown here:
-
-```javascript
-print('add code snippet 1 here')
-```
 
 
 ## Future Features
 
-1. __Search__ - search {resource-1-plural}
+1. __Search__ - Search for resources
 
-2. __Second Feature__ - second feature details
+2. __Github Following and signing in via third party__ - Users will be able to sign in via github
+
+3. __Documentation Generation__ - Users will be able to get basic templated documentation for their projects
 
 
 ## Contact
 
-### {Your Name}
+### Henry Walton
 <a href="https://www.linkedin.com/in/hnrywltn/"><img src="./readme-assets/logos/linkedin-logo.png" height="28" align="middle" /></a>
-<a href="https://angel.co/u/{angel-list-handle}"><img src="./readme-assets/logos/angellist-logo.png" height="28" align="middle" /></a>
+<a href="https://angel.co/u/henry-walton-3"><img src="./readme-assets/logos/angellist-logo.png" height="28" align="middle" /></a>
 <a href="https://github.com/hnrywltn"><img src="./readme-assets/logos/github-logo.png" height="38" align="middle" /></a>
 
-{email}
+hnrywltn@gmail.com
 
 
 ## Special Thanks
-* Fellow peers who have given me support and community: [Andrew](https://github.com/andru17urdna), [Henry](https://github.com/hnrywltn), [Pierre](https://github.com/TheGuilbotine), [Lema](https://github.com/lemlooma), [Meagan](https://github.com/meagan13), [Simon](https://github.com/Simonvargas), [Michelle](https://github.com/michellekontoff), [Nico](https://github.com/nicopierson), [John](https://github.com/Jomix-13), [Manna](https://github.com/makon57), and [Monte](https://github.com/theflaggship)
-* Mentors who have given me their time and effort: [Zach](https://github.com/zdwatts), [Olivia](https://github.com/OByrnes), [Ed](https://github.com/edherm), and [Javier](https://github.com/javiermortiz)
+* Fellow peers who have given me support and community: [Andrew](https://github.com/andru17urdna), [Pierre](https://github.com/TheGuilbotine), [Lema](https://github.com/lemlooma), [Meagan](https://github.com/meagan13), [Simon](https://github.com/Simonvargas), [Michelle](https://github.com/michellekontoff), [Nico](https://github.com/nicopierson), [John](https://github.com/Jomix-13), [Manna](https://github.com/makon57), and [Monte](https://github.com/theflaggship)
+* Mentors who have given me their time and effort: [Caleb](https://github.com/CalebAmes), [Ed](https://github.com/edherm), and [Javier](https://github.com/javiermortiz)
