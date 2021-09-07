@@ -52,7 +52,7 @@ function Home() {
   let emptyGithubDom = (
     <div className="empty-github-container">
       {/* <h3>How to use the site:</h3> */}
-      <h4>In the section above, you will find resources that can help inspire you and ones that you can use as resources while working on projects. Create your own resource collection by entering a link in the the proper format along with a name and description. Enter a github handle on the left to search github!</h4>
+      <h4>In the section above, you will find resources that can help inspire you and ones that you can use while working on projects. Create your own resource collection by entering a link in the the proper format along with a name and description. Enter a github handle on the left to search github!</h4>
     </div>
   );
 

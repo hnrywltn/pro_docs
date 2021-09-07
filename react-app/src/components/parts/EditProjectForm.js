@@ -43,39 +43,40 @@ function EditProjectForm({project, setShowEditForm}) {
         setShowEditForm(false);
     };
 
-
+    const cancelClick = async (e) => {
+        setShowEditForm(false);
+    };
 
 
     let projectForm = (
       <>
             <form
-              className='form formstyle'
+              className='editProjectForm'
               onSubmit={handleSubmit}
             >
-                <div>
-                    <label>Description</label>
-                    <input
-                        type='text'
-                        value={description}
-                        required
-                        onChange={updateDescription} />
-                </div>
-                <div>
-                    <label>Reference Link</label>
-                    <input
-                        type='url'
-                        value={github_link}
-                        pattern="https://github.com/.*"
-                        maxLength="100"
-                        placeholder="https://github.com/{githubhandle}/{projectname}"
-                        onChange={updateGithubLink}
-                        required />
-                </div>
+                <input
+                    className='editProjectLINK__input'
+                    type='url'
+                    value={github_link}
+                    pattern="https://github.com/.*"
+                    maxLength="100"
+                    placeholder="https://github.com/{githubhandle}/{projectname}"
+                    onChange={updateGithubLink}
+                    required />
+                <input
+                    className='editProjectDESC__input'
+                    type='text'
+                    value={description}
+                    required
+                    onChange={updateDescription} />
 
-                <button type='submit'>Edit</button>
+                <button className="projectbttnEDIT" type='submit'>Edit</button>
             </form>
-            <button onClick={deleteClick}>
-              Delete
+            <button className="projectbttnDELETE" onClick={deleteClick}>
+              Delete Project
+            </button>
+            <button className="projectbttnCANCEL" onClick={cancelClick}>
+              Cancel
             </button>
       </>
     )

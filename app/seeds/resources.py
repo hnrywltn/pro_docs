@@ -285,12 +285,12 @@ def seed_resources():
     ref_link="https://www.wolframalpha.com/",
     description="WolframAlpha tool",
   )
-  # = Resource(
-  #   name=,
-  #   cat_id=,
-  #   ref_link=,
-  #   description=,
-  # )
+  Python = Resource(
+    name="Python Documentation",
+    cat_id=3,
+    ref_link="https://www.python.org/",
+    description="Python is an interpreted high-level general-purpose programming language. Its design philosophy emphasizes code readability with its use of significant indentation.",
+  )
   # = Resource(
   #   name=,
   #   cat_id=,
@@ -300,6 +300,7 @@ def seed_resources():
 
 
   db.session.add(mdn)
+  db.session.add(Python)
   db.session.add(SalaryLevels)
   db.session.add(node)
   db.session.add(github)
