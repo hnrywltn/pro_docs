@@ -30,7 +30,8 @@ function Splash() {
         <img src="https://i.imgur.com/ypzl1sH.png" alt="icon"/>
       </div>
       <Link className="splashLogin" to="/login">
-        <img src="https://i.imgur.com/xftZfBi.png" alt="login"/>
+        {/* <img src="https://i.imgur.com/xftZfBi.png" alt="login"/> */}
+        Login
       </Link>
       <Link className="splashSignup" to="/sign-up">
         SignUp
@@ -41,11 +42,11 @@ function Splash() {
       >
         DEMO
       </button>
-      <a href="https://www.linkedin.com/in/henry-walton-324977187/" target="_blank" rel="noreferrer" className="splashLinkden">
-        <img src="https://i.imgur.com/yHgUB15.png" alt="login"/>
+      <a href="https://www.linkedin.com/in/henry-walton-324977187/" target="_blank" rel="noreferrer" className="splashLinkedin">
+        <img src="https://i.imgur.com/yHgUB15.png" alt="linkedin"/>
       </a>
       <a href="https://github.com/hnrywltn/pro_docs" target="_blank" rel="noreferrer" className="splashgithub">
-        <img src="https://i.imgur.com/35z8Aim.png" alt="login"/>
+        <img src="https://i.imgur.com/35z8Aim.png" alt="github"/>
       </a>
     </div>
   );
