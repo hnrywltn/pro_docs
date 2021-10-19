@@ -22,8 +22,8 @@ function Splash() {
     <div className="splashpage">
       <h1 className="title">pro_docs</h1>
       <div className="splashabout">
-          pro_docs is an app that can help you track your projects in a user friendly way.
-          choose technologies, build your resource collection, and find others on gitHub.
+          pro_docs is an app that can help developers track and manage projects.
+          Developers can choose technologies to add to their projects, build resource collections, and find others on gitHub.
 
       </div>
       <div className="icon-container">
