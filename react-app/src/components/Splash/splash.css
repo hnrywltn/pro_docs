@@ -4,10 +4,6 @@
   display: grid;
   grid-template-columns: repeat(25, 4vw);
   grid-template-rows: repeat(25, 4vh);
-  /* background-image: url(https://i.imgur.com/w2UbEfX.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
   font-family: monospace;
   background-color: rgb(224, 240, 255);
 }
@@ -16,36 +12,26 @@
 .demobttn {
   background-color: rgba(224, 224, 224, 0.808);
   grid-row: 19 / 25;
-  grid-column: 21 / 25;
-  font-size: 200%;
-  /* border: 1px solid black; */
+  grid-column: 20 / 24;
+  font-size: 3vmin;
   border: none;
   font-family: monospace;
-}
-
-.demobttn {
+  width: 100%;
   cursor: pointer;
 }
 
+
 .splashLogin {
-  /* display: flex;
-  background-color: rgba(147, 165, 184, 0.671);
-  justify-content: center;
-  align-items: center;
-  grid-row: 11 / 15;
-  grid-column: 23 / 25;
-  border: 1px solid black;
-  font-family: monospace; */
   background-color: rgba(224, 224, 224, 0.808);
   display: flex;
   grid-row: 19 / 25;
-  grid-column: 16 / 21;
+  grid-column: 16 / 20;
   justify-content: center;
   align-items: center;
-  font-size: 200%;
+  font-size: 3vmin;
   text-decoration: none;
-  /* border: 1px solid black; */
   font-family: monospace;
+  width: 100%;
 }
 
 
@@ -55,9 +41,10 @@
   display: flex;
   grid-row: 19 / 25;
   grid-column: 12 / 16;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  font-size: 200%;
+  font-size: 3vmin;
   text-decoration: none;
   /* border: 1px solid black; */
   font-family: monospace;
@@ -68,14 +55,17 @@
   display: flex;
   grid-row: 21 / 25;
   grid-column: 3 / 5;
+  height: 15vmin;
+  width: 15vmin;
   /* border: 1px solid black; */
   justify-content: center;
   align-items: center;
 }
 
 .splashLinkedin img {
-  width: 90%;
-  height: 90%;
+  /* width: 90%;
+  height: 90%; */
+  height: 10vmin;
 }
 
 .splashgithub {
@@ -84,13 +74,14 @@
   grid-row: 21 / 25;
   grid-column: 8 / 10;
   justify-content: center;
+  height: 15vmin;
+  width: 15vmin;
   align-items: center;
   /* border: 1px solid black; */
 }
 
 .splashgithub img {
-  width: 90%;
-  height: 90%;
+  height: 10vmin;
 }
 
 
@@ -102,6 +93,8 @@
   grid-row: 3 / 15;
   /* width: 20rem;
   height: 20rem; */
+  height: 40vmin;
+  width: 40vmin;
   border-radius: 50%;
   background-color: rgb(230, 230, 230);
   box-shadow: 0px 0px 30px #ffffff73;
@@ -115,20 +108,19 @@
 .splashabout {
   display: flex;
   background-color: rgba(224, 224, 224, 0.808);
-  font-size: 2em;
-  /* border-radius: 20px; */
+  font-size: 3vmin;
+  width: 100%;
   color: rgb(0, 0, 0);
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 15px;
   grid-row: 3 / 19;
-  grid-column: 12 / 25;
+  grid-column: 12 / 24;
 }
 
 .title {
   display: flex;
-  font-size: 5rem;
+  font-size: 9vmin;
   color: rgb(104, 104, 104);
   grid-column: 3 / 12;
   text-align: center;

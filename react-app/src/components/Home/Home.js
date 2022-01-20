@@ -104,7 +104,7 @@ function Home() {
       const response = await fetch(`https://api.github.com/users/${gitHubHandle}`);
       const data = await response.json();
       setPerson(data);
-      console.log('person', person);
+      console.log('DATA!!!', data);
       // if (!person?.name && !person?.message) {
       //   let obj = person;
       //   obj['name'] = gitHubHandle;

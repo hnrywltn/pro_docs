@@ -41,6 +41,7 @@ export const login = (email, password) => async (dispatch) => {
     })
   });
 
+  console.log('RESPONSE', response)
 
   if (response.ok) {
     const data = await response.json();
@@ -71,7 +72,7 @@ export const logout = () => async (dispatch) => {
 
 
 export const signUp = (github_handle, email, password, bio, linkedin) => async (dispatch) => {
-  console.log(github_handle, email, password, bio, linkedin)
+  // console.log(github_handle, email, password, bio, linkedin)
   const response = await fetch('/api/auth/signup', {
     method: 'POST',
     headers: {
