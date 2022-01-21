@@ -23,7 +23,6 @@
   overflow-y: scroll;
   height: 50vh;
   box-sizing: border-box;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 
 }
 
@@ -55,9 +54,9 @@
   grid-template-rows: repeat(9, 10%);
   grid-column: 1 / 5;
   grid-row: 1 / 6;
-  background-color: rgb(65, 65, 65);
+  background-color: rgba(139, 139, 139, 0.712);
   border-radius: 10px;
-  color: snow;
+  color: rgb(224, 240, 255);
   font-family: monospace;
   font-size: 1.5em;
   justify-items: center;
@@ -115,7 +114,7 @@
   text-align: center;
   font-family: monospace;
   font-size: 2em;
-  color: snow;
+  color: rgb(100, 100, 100);
   padding: 30px;
   grid-column: 5 / 11;
   grid-row: 1 / 6;

@@ -50,7 +50,7 @@
   display: grid;
   overflow: hidden;
   height: 100%;
-  background: linear-gradient(180deg, rgba(243,243,243,1)  0%, rgba(60,60,60,0.25) 100%);
+  background: linear-gradient(180deg, rgb(255, 254, 254)  0%, rgb(224, 240, 255) 100%);
 }
 
 
@@ -67,7 +67,6 @@
 }
 
 .githubAPI-container form {
-  /* padding: 25px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -109,7 +108,6 @@
   grid-template-rows: repeat(5, 20%);
   grid-row: 2 / end;
   grid-column: 2 / end;
-  /* text-align: center; */
   display: grid;
   overflow: hidden;
   font-family: monospace;
@@ -149,7 +147,6 @@
   grid-row: 2 / end;
   height: 85%;
   background-color: rgba(80, 79, 79, 0.376);
-  /* border:1px solid #000; */
   overflow-y: scroll;
   border-radius: 8%;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -167,8 +164,6 @@
   margin-top: 5%;
   display: flex;
   flex-direction: column;
-  /* justify-content: center;
-  align-items: center; */
 }
 
 .publicRepo a {
@@ -216,7 +211,7 @@
   height: 100%;
 	box-sizing: border-box;
   border-bottom: 1px solid #000;
-  background: linear-gradient(180deg, rgba(60,60,60,0.25) 0%, rgb(243, 243, 243) 100%);
+  background: linear-gradient(180deg, rgb(224, 240, 255) 0%, rgb(255, 255, 255) 100%);
 }
 
 
@@ -314,7 +309,7 @@
   border-radius: 10%;
   border-top: 5px solid rgba(34, 34, 34, 0.561);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  background-color: rgb(144, 144, 144);
+  background-color: transparent;
 }
 
 .cat-container:hover {
@@ -329,7 +324,7 @@
 .resource a {
   text-decoration: none;
   font-size: 2rem;
-  color:white;
+  color:rgb(100, 100, 100);
 }
 
 .resource p {

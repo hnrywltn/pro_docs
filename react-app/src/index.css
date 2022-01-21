@@ -18,11 +18,10 @@ html, body {
 
 #root {
 	box-sizing: border-box;
-	background-color: #777777;
-  display: grid;
-  grid-template-columns: repeat(25, 4vw);
-  grid-template-rows: repeat(25, 4vh);
-  /* overflow: hidden; */
+	background-color: rgb(224, 240, 255);
+    display: grid;
+    grid-template-columns: repeat(25, 4vw);
+    grid-template-rows: repeat(25, 4vh);
 	height: 100vh;
 }
 
@@ -83,8 +82,8 @@ form {
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	background: linear-gradient(180deg, rgba(42, 106, 165, 0.137) 0%, rgba(187, 187, 187, 0.404) 50%, rgba(42, 106, 165, 0.137) 100%);
-	border-right: 3px solid rgba(202, 202, 202, 0.651);
+	background-color: rgb(224, 240, 255);
+	border-right: 3px solid rgb(206, 206, 206);
 	font-family: monospace;
 	height: 100vh;
 }
@@ -93,11 +92,9 @@ form {
 	background: none;
 	border: none;
 	font-family: monospace;
-}
-
-.navbar button:hover {
 	cursor: pointer;
 }
+
 
 .navlink:hover {
 	color: rgb(0, 0, 0);
@@ -106,13 +103,12 @@ form {
 
 .navlink {
 	display: flex;
-	color: #fff;
+	color: rgb(175, 72, 72);
 	text-decoration: none;
 	font-size: 1.2rem;
 	font-weight: bold;
 	text-transform: uppercase;
 	align-items: center;
 	height: 33%;
-	/* width: 100%; */
-  background-color: transparent;
+    background-color: transparent;
 }
