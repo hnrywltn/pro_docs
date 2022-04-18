@@ -1,9 +1,9 @@
 import React from 'react';
-// import { useParams } from 'react-router-dom';
 import { Link, useHistory } from 'react-router-dom';
 import { login } from '../../store/session';
 import { useDispatch } from 'react-redux';
-import './splash.css'
+import './splash.css';
+import Typewriter from 'typewriter-effect';
 
 function Splash() {
 
@@ -20,11 +20,16 @@ function Splash() {
 
   return (
     <div className="splashpage">
-      <h1 className="title">pro_docs</h1>
+      <h1 className="title">
+        <Typewriter className='splashabout'
+          onInit={(writer) => {
+            writer.typeString("pro_docs").start();
+          }}
+        />
+      </h1>
       <div className="splashabout">
-          pro_docs is an app that can help developers track and manage projects.
-          Developers can choose technologies to add to their projects, build resource collections, and find others on gitHub.
-
+      pro_docs is an app that can help developers track and manage projects.
+      Developers can choose technologies to add to their projects, build resource collections, and find others on gitHub.
       </div>
       <div className="icon-container">
         <img src="https://i.imgur.com/ypzl1sH.png" alt="icon"/>

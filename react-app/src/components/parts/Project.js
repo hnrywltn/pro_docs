@@ -22,6 +22,7 @@ function Project({project, technologies}) {
   });
 
 
+
   let editDom = null;
 
   if (showEditForm) {

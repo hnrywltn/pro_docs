@@ -68,10 +68,6 @@ function Projects() {
   };
 
 
-  // const updateResourcesArray = (e) => {
-  //   setResourcesArray(resources_array.push(e.target.value));
-  // };
-
 
 
   const updateTechArray = (e) => {
@@ -84,7 +80,6 @@ function Projects() {
   };
 
 
-// console.log(tech_array)
 
 
   const updateDescription = (e) => {
@@ -97,12 +92,13 @@ function Projects() {
 
 
 
-  let emptyProjectDom = (
+  let emptyProjectDom = () => (
     <div className="empty-project-container">
       <h1>You have no projects!</h1>
       <h2>Create a new project above!</h2>
     </div>
-  )
+  );
+
 
 
   let projectsDom = (
@@ -112,7 +108,7 @@ function Projects() {
           Keep track of past, current, and future projects. Add a description, github link, and technologies on the left and view your project information below.
         </div>
         <div className="emptyProjectDom projectList">
-          {!usersProjects.length && emptyProjectDom}
+          {!usersProjects.length && emptyProjectDom()}
         </div>
         <div className="projectList">
           {usersProjects && usersProjects.map(project => {

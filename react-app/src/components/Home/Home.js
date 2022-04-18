@@ -41,7 +41,6 @@ function Home() {
   const resourceList = Object.values(resources);
 
 
-  // const organizedResources = resources.map(resource => {
     const catIds = resourceList.map(resource => {
       return [resource.cat_id, resource.id];
       }).sort(function(a, b) {
@@ -105,11 +104,6 @@ function Home() {
       const data = await response.json();
       setPerson(data);
       console.log('DATA!!!', data);
-      // if (!person?.name && !person?.message) {
-      //   let obj = person;
-      //   obj['name'] = gitHubHandle;
-      //   setPerson(obj);
-      // }
       setGitHubHandle('');
       updatePublicRepos(data);
     }
