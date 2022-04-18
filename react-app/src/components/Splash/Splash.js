@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import './splash.css';
 import Typewriter from 'typewriter-effect';
 
+
 function Splash() {
 
   const dispatch = useDispatch();
