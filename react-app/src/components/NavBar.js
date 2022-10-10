@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LogoutButton from './auth/LogoutButton';
+import Clock from './Clock/Clock';
 import { useSelector } from 'react-redux';
 
 const NavBar = () => {
@@ -32,7 +33,10 @@ const NavBar = () => {
         Projects
       </Link>
 
+      <Clock></Clock>
       {user?.id&&<LogoutButton />}
+
+
     </nav>
   );
 }

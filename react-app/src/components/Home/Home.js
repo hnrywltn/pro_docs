@@ -41,6 +41,7 @@ function Home() {
   const resourceList = Object.values(resources);
 
 
+
     const catIds = resourceList.map(resource => {
       return [resource.cat_id, resource.id];
       }).sort(function(a, b) {
@@ -50,7 +51,6 @@ function Home() {
 
   let emptyGithubDom = (
     <div className="empty-github-container">
-      {/* <h3>How to use the site:</h3> */}
       <h4>In the section above, you will find resources that can help inspire you and ones that you can use while working on projects. Create your own resource collection by entering a link in the the proper format along with a name and description. Enter a github handle on the left to search github!</h4>
     </div>
   );
@@ -120,9 +120,10 @@ function Home() {
 
       <div className="resources-container">
         <div className="resourceAdd">
-          {/* <h2>Add a Resource</h2> */}
           <AddResourceForm categories={categories} />
         </div>
+
+
 
         <div className="personalResources">
           <h2>Your Resources</h2>
@@ -181,7 +182,6 @@ function Home() {
 
 
       </div>}
-      {/* {!person?.name &&<div>Find people on github!!</div>} */}
     </div>
 
 
