@@ -39,7 +39,7 @@ function Clock() {
       getRotation(minutes, 'min');
       getRotation(hours, 'h');
 
-      document.title = `${hours}:${minutes}`;
+
       getDate();
     }, 1000);
     return () => clearInterval(interval);
